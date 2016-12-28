@@ -1,0 +1,191 @@
+@import "vars";
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic');
+// @font-face {
+//     font-family: 'Helvetica Neue';
+//     src: url('fonts/helveticaneuecyr-light.woff') format('woff');
+//     font-weight: 100;
+// }
+// @font-face {
+//     font-family: 'Helvetica Neue';
+//     src: url('fonts/helveticaneuecyr-roman.woff') format('woff');
+//     font-weight: 400;
+// }
+// @font-face {
+//     font-family: 'Helvetica Neue';
+//     src: url('fonts/helveticaneuecyr-bold.woff') format('woff');
+//     font-weight: 600;
+// }
+html, *, *::before, *::after, input[type="search"] {
+    box-sizing: border-box;
+}
+body {
+    font-family: $font;
+    font-size: $fontSize;
+    min-height: 100vh;
+    font-weight: 300;
+}
+body [class^="icon-"], body [class*=" icon-"] {
+    font-family: inherit !important;
+    font-weight: inherit;
+    &:before {
+        font-family: 'icomoon' !important;
+        vertical-align: middle;
+        // line-height: 1;
+        // font-size: 1.2em;
+    }
+}
+//----------------- heaaders
+h1, .h1 {
+    font-size: $h1
+}
+h2, .h2 {
+    font-size: $h2
+}
+h3, .h3 {
+    font-size: $h3
+}
+h4, .h4 {
+    font-size: $h4
+}
+h5, .h5 {
+    font-size: $h5
+}
+h6, .h6 {
+    font-size: $h6
+}
+h1, h2, h3, h4, h5, h6, .hdr.h1, .hdr.h2, .hdr.h3, .hdr.h4, .hdr.h5, .hdr.h6 {
+    margin: $colGap*2 0 $colGap 0;
+    font-weight: 300;
+    line-height: 1.1em;
+    small {
+        color: $txt_light;
+    }
+}
+p {
+    margin: 0 0 $line_h 0;
+    line-height: $line_h;
+}
+code, kbd, pre, samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.mark, mark {
+    background: #FFEABE;
+    padding: .2em;
+}
+a {
+    text-decoration: none;
+    color: $active;
+}
+[class*="content"] li {
+    margin: 0 0 $colGap $colGap*3;
+}
+ul, ol {
+    margin: 0px;
+    padding: 0px;
+}
+ol {
+    list-style-type: none;
+    counter-reset: li;
+    li {
+        &:before {
+            content: counter(li)'.';
+            counter-increment: li;
+            display: inline-block;
+            width: $colGap*2;
+            margin-left: -$colGap*3;
+            margin-right: .3em;
+            color: $txt_light;
+        }
+    }
+}
+.hr {
+    border-bottom: $table_brdr 1px solid;
+}
+.block {
+    display: block;
+}
+//-------------helpers
+.fl_l {
+    float: left;
+}
+.fl_r {
+    float: right;
+}
+.txt_l {
+    text-align: left;
+}
+.txt_r {
+    text-align: right;
+}
+.txt_c {
+    text-align: center;
+}
+.txt_j {
+    text-align: justify;
+}
+.txt_upper {
+    text-transform: uppercase;
+}
+.txt_lower {
+    text-transform: lowercase;
+}
+.txt_caps {
+    text-transform: capitalize;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.v_top {
+    vertical-align: top;
+}
+.v_base {
+    vertical-align: baseline;
+}
+.v_middl, .middl {
+    &>* {
+        vertical-align: middle;
+        &:before {
+            content: '';
+            height: 100%;
+        }
+    }
+}
+.tab {
+    color: $txt_light;
+    box-sizing: border-box;
+    @include rounded(5px);
+}
+.tab1 {
+    color: $txt_light;
+    @include shadow(5px, 5px, 10px, #000);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+blockquote {
+    position: relative;
+    margin: 0px;
+    font-size: 1.2rem;
+    padding: 1rem 1rem 2rem 40px;
+    p {
+        margin-bottom: .5em;
+    }
+    footer {
+        font-size: .9rem;
+        color: #aaa;
+        &:before {
+            content: '\2014 \00A0';
+        }
+    }
+    &:before {
+        content: '\201d';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 80px;
+        color: #ddd;
+        font-family: $serif;
+    }
+}

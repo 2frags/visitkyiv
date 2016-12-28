@@ -1,0 +1,162 @@
+@import "vars";
+//---------------------------------------------------------------------------- BUTTONS
+@mixin btn_hover($bg) {
+    background: $bg;
+    &:focus, &:hover {
+        background: darken($bg, 7%);
+    }
+}
+@mixin btn_brdr_hover($bg) {
+    border-color: $bg;
+    color: $bg;
+}
+.btn {
+    border: none;
+    width: auto;
+    vertical-align: middle;
+    text-decoration: none;
+    background: $active;
+    display: inline-block;
+    // color:$txt_mid;
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+    border: transparent 1px solid;
+    @include transition(all ease-in-out .2s);
+    @if $rnd !=0 {
+        @include rounded($rnd);
+    }
+    &[class*=" icon-"], &[class^="icon-"] {
+        line-height: inherit;
+        &:before {
+            // font-size: 1.25em;
+            // line-height: 1.15em;
+            // font-size: 1.15em;
+            // line-height: 1.2em;
+            vertical-align: 0%;
+        }
+    }
+    // &:active,
+    &:focus, &:hover {
+        // box-shadow: 0px -2.5em 1px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0px 0px 1em 1em rgba(0, 0, 0, 0.1) inset;
+        outline: none;
+    }
+    // @include btn_hover($active);
+    &.rnd {
+        @include rounded($rnd);
+    }
+    &.sh {
+        @include shadow(2px, 2px, 8px, rgba(0, 0, 0, .3));
+    }
+    &.brdr {
+        background: transparent;
+        &:focus, &:hover {
+            box-shadow: none;
+            // @include rounded($rnd*3);
+            // border-color: #333;
+            @include opacity(.7);
+            // box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, .3) inset;
+            // border-color: transparent;
+            // outline: none;
+        }
+    }
+    small {
+        @include opacity(.7);
+        font-size: .9em;
+    }
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    cursor: not-allowed;
+    @include opacity(.4);
+    pointer-events: none;
+}
+.btn.h1 {
+    font-size: $h1f;
+}
+.btn.h2 {
+    font-size: $h2f;
+}
+.btn.h3 {
+    font-size: $h3f;
+}
+.btn.h4 {
+    font-size: $h4f;
+}
+.btn.h5 {
+    font-size: $h5f;
+}
+//================ colors
+.clr_white {
+    background: $clr_white;
+}
+.clr_black {
+    background: $clr_black;
+}
+.clr_dark {
+    background: $clr_dark;
+}
+.clr_err {
+    background: $clr_err;
+}
+.clr_warn {
+    background: $clr_warn;
+}
+.clr_info {
+    background: $clr_info;
+}
+.clr_ok {
+    background: $clr_ok;
+}
+.clr_def {
+    background: $active;
+}
+.clr_black, .clr_dark, .clr_err, .clr_warn, .clr_info, .clr_ok, .clr_def {
+    color: #fff;
+}
+.brdr {
+    background: transparent;
+    border-color: $txt_mid;
+    color: $txt_dark;
+}
+// .clr_none,
+.clr_none {
+    color: $active;
+    background: transparent;
+    border-color: transparent;
+    // @include btn_hover(transparent);
+    &:hover {
+        box-shadow: none;
+        text-decoration: underline;
+    }
+    &.disabled, &[disabled] {
+        color: $txt_mid;
+    }
+}
+.brdr, .fld, select {
+    &[class*="clr_"] {
+        background: transparent;
+    }
+    &.clr_white {
+        @include btn_brdr_hover($clr_white);
+    }
+    &.clr_err {
+        @include btn_brdr_hover($clr_err);
+    }
+    &.clr_warn {
+        @include btn_brdr_hover($clr_warn);
+    }
+    &.clr_info {
+        @include btn_brdr_hover($clr_info);
+    }
+    &.clr_ok {
+        @include btn_brdr_hover($clr_ok);
+    }
+    &.clr_def {
+        @include btn_brdr_hover($active);
+    }
+}

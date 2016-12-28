@@ -1,0 +1,61 @@
+@import "vars";
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    tr:nth-child(even)>td {
+        background: $td_even;
+    }
+    td, th {
+        padding: 0.5em 1em;
+        border: none;
+        &:first-child {
+            border-left-width: 0;
+        }
+        th {
+            border-bottom: $table_brdr 1px solid;
+        }
+    }
+    &.brdr {
+        border: $table_brdr 1px solid;
+    }
+    &.h_brdr {
+        td, th {
+            border-bottom: $table_brdr 1px solid;
+        }
+    }
+    &.v_brdr {
+        td, th {
+            border-left: $table_brdr 1px solid;
+            &:first-child {
+                border-left-width: 0;
+            }
+        }
+    }
+    &.all_brdr {
+        border: $table_brdr 1px solid;
+        td, th {
+            border-bottom: $table_brdr 1px solid;
+            border-left: $table_brdr 1px solid;
+            &:first-child {
+                border-left-width: 0;
+            }
+        }
+    }
+    &.fit {
+        td, th {
+            padding: 0.2em .4em;
+        }
+    }
+    &.tr_hover, &.td_hover {
+        td {
+            @include transition(background ease-in-out .2s);
+        }
+    }
+    &.tr_hover tr:hover td {
+        background: $active_light;
+    }
+    &.td_hover td:hover {
+        background: $active_light;
+    }
+}

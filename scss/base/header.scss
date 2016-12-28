@@ -1,0 +1,35 @@
+@import "vars";
+$hdr_btn_size: 35px;
+.page_hdr {
+    background: $bg_1;
+    color: $txt_mid;
+    height: $page_hdr_H;
+    position: relative;
+    z-index: 101;
+    nav {
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    .logo {
+        font-size: 120%;
+    }
+}
+.hdr_top {
+    background: $bg_1;
+    padding: 0 $page_padd;
+}
+.hdr_btn {
+    display: inline-block;
+    background: #333;
+    width: $hdr_btn_size;
+    height: $hdr_btn_size;
+    line-height: $hdr_btn_size;
+    vertical-align: middle;
+    text-align: center;
+    color: $txt_light;
+    @include rounded(30px);
+}
+//------------------- queries
+@include mquery(min-width, $s) {}

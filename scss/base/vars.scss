@@ -1,0 +1,190 @@
+// 1em = 16px
+$xx: 5em;
+$xs: 22.5em;
+$s: 35.5em;
+$m: 48em;
+$l: 64em;
+$xl: 80em;
+$columns:12;
+$colGap:0.6rem;
+$page_padd: 1%;
+//------------------- hdr
+$page_hdr_H: 116px;
+$menu_fixed_W: 40%;
+$menu_dark: 1;
+//1 - dark menu; 0 - light menu
+//------------------- colors
+$bg_1: #fff;
+$bg_2:#f6f6f6;
+$txt_light: #999;
+$txt_mid: #666;
+$txt_dark: #333;
+$table_brdr: #ddd;
+$td_even: #fafafa;
+$active: #019cde;
+$active_light: lighten($active, 44%);
+$f_active: $active;
+$tab_bg: #fff;
+//----------------- buttons colors
+$clr_white: #fff;
+$clr_black: #000;
+$clr_dark: #333;
+$clr_err: #e84e10;
+$clr_warn:#faba00;
+$clr_info:#51D4BD;
+$clr_ok:#77b72b;
+//----------------- fonts
+$line_h: 1.4em;
+$fontSize: 16px;
+$h1:2.4rem;
+$h2:2.1rem;
+$h3:1.8rem;
+$h4:1.4rem;
+$h5:1.2rem;
+$h6:1rem;
+// $font:'Open Sans', Arial, sans-serif;
+$font: 'Roboto', sans-serif;
+// $font: 'Helvetica Neue', Arial, sans-serif;
+$serif: Georgia, Times, 'Times New Roman', serif;
+//----------------- form sizes
+$h1f:1.5rem;
+$h2f:1.3rem;
+$h3f:1.1rem;
+$h4f:.9rem;
+$h5f:.8rem;
+$fld_padd_h: .5em;
+$fld_padd_v: .4em;
+//---------------round corners
+$rnd: 3px;
+//----------------- query
+@mixin mquery($value, $query) {
+    @media ($value: $query) {
+        @content
+    }
+}
+//------------------- filter
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+@mixin filter($filter-type, $filter-amount) {
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    // -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    // -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+@mixin rounded($radius) {
+    // -moz-border-radius: $radius;
+    // -webkit-border-radius: $radius;
+    // -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+//-------------- lighten
+@mixin lighten($color) {
+    background: ighten( $color, 10%);
+}
+//-------------- opacity
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    // $opacity-ie: $opacity * 100;
+}
+//-------------- box-shadow
+@mixin shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        // -webkit-box-shadow: inset $top $left $blur $color;
+        // -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        // -webkit-box-shadow: $top $left $blur $color;
+        // -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+//-------------------animation delay
+@mixin a_delay($val) {
+    -webkit-animation-delay: $val;
+    // -moz-animation-delay: $val;
+    // -o-animation-delay: $val;
+    animation-delay: $val;
+}
+//------------------------- transition
+@mixin transition($args...) {
+    // -webkit-transition: $args;
+    // -moz-transition: $args;
+    // -ms-transition: $args;
+    // -o-transition: $args;
+    transition: $args;
+}
+//-------------------- transforms
+// generic transform
+@mixin transform($transforms) {
+    // -moz-transform: $transforms;
+    // -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+// translate
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    // moz-transform-origin: $origin;
+    // -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+//-----------------Placeholder
+@mixin placeholder {
+     ::-webkit-input-placeholder {
+        @content
+    }
+     :-moz-placeholder {
+        @content
+    }
+     ::-moz-placeholder {
+        @content
+    }
+     :-ms-input-placeholder {
+        @content
+    }
+     ::-ms-input-placeholder {
+        @content
+    }
+}
+//-----------------Gradients
+@mixin gr_vr($start: rgba(0, 0, 0, 0), $stop: rgba(0, 0, 0, .2)) {
+    // background: ($start + $stop) / 2;
+    background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+    // background: -moz-linear-gradient(center top, $start 0%, $stop 100%);
+    // background: -moz-gradient(center top, $start 0%, $stop 100%);
+    background: linear-gradient(to bottom, $start 0%, $stop 100%);
+}
+// Background Gradient: Left to Right
+@mixin gr_hr($start: rgba(0, 0, 0, 0), $stop: rgba(0, 0, 0, .2)) {
+    // background: ($start + $stop) / 2;
+    background: -webkit-gradient(linear, top left, top right, from($start), to($stop));
+    // background: -moz-linear-gradient(center left, $start 0%, $stop 100%);
+    // background: -moz-gradient(center left, $start 0%, $stop 100%);
+    background: linear-gradient(to right, $start 0%, $stop 100%);
+}

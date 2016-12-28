@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    <div class="grid js-main_wrap">
+        <div class="col1 js_inner_wrap">
+            <div class="page_hdr">
+                <header>
+
+                    <div class="hdr_top grid v_middl">
+                        <div class="col xx-5 s-4 m-3">
+                            <div class="top_info">
+                                <span>Tourist info</span>
+                                <span class="icon-phone2">660*</span>
+                                <small>*Вартiсть дзвiнкiв згiдно тарифiв операторiв</small>
+                            </div>
+                        </div>
+                        <div class="col xx-4 m-6">
+                            <a href="#" class="logo"></a>
+                        </div>
+                        <div class="col xx-3 s-4 m-3">
+                            <div class="login txt_r">
+                                <a href="account.html" data-fancybox-type="ajax" class="fancybox ajax">ВХІД</a> | <a href="register.html" data-fancybox-type="ajax" class="fancybox ajax">РЕЄСТРАЦІЯ</a>
+                            </div>
+                            <div class="lang fl_r">
+                                <span class="lang_current" id="curr_lang">UA</span>
+                                <div class="other_langs">
+                                    <a href="#">EN</a>
+                                    <a href="#">RU</a>
+                                    <a href="#">DE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--hdr_top-->
+                    <div class="grid navbar clr_white">
+                        <div class="col xx-10 m-12 txt_c">
+                            <ul class="nav" id="mainmenu">
+                                <li>
+                                    <a href="#">НОВИНИ</a>
+                                </li>
+                                <li>
+                                    <a href="#">АФІША</a>
+                                </li>
+                                <li>
+                                    <a href="#">ВІДПОЧИНОК У КИЄВІ</a>
+                                </li>
+                                <li>
+                                    <a href="#">МАРШРУТИ ТА ЛОКАЦІЇ</a>
+                                </li>
+                                <li class="top_search  icon-search">
+                                    <input type="text" placeholder="Пошук..." class="fld clr_none">
+                                    <input type="submit" class="btn clr_none">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col xx-2 m0 txt_r">
+                            <div class="btn brdr icon-menu" data-target="#mainmenu"></div>
+                        </div>
+                    </div>
+
+                </header>
+            </div>
+            <!--page_hdr-->
+            <ul class="slider_wide" id="events_slider">
+                <li style="background-image: url(tmp/1.jpg)">
+                    <div class="block_wrap">
+                        <time>3 грудня – 3 грудня</time>
+                        <div class="h2">Посольства 38 країн запрошують на благодійний ярмарок</div>
+                        <a href="#" class="btn brdr clr_white">Детальнiше</a>
+                        <div class="social_box">
+                            <a class="icon-facebook" href=""></a>
+                            <a class="icon-twitter" href=""></a>
+                            <a class="icon-instagram" href=""></a>
+                            <a class="icon-vk" href=""></a>
+                        </div>
+                        <div class="slide_num">
+                            03
+                            <sup>/06</sup>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url(tmp/2.jpg)">111</li>
+                <li style="background-image: url(tmp/1.jpg)">111</li>
+            </ul>
+            <!-- ========================================================slider-->
+            <div class="block_wrap">
+                <form action="" class="top_filters grid">
+                    <div class="col h6 txt_c">ПОШУК НАЙКРАЩИХ ЗАХОДІВ АФІШИ МІСТА</div>
+                    <div class="col s-6 m-3">
+                        <input type="text" id="tv22" name="tv22" class="date">
+                        <input type="text" id="tv22i" class="date_show">
+                        <span class="icon-calendar"></span>
+                        <span class="icon-close"></span>
+                    </div>
+                    <div class="col s-6 m-3">
+                        <input type="text" id="tv34" name="tv22" class="date">
+                        <input type="text" id="tv34i" class="date_show">
+                        <span class="icon-calendar"></span>
+                        <span class="icon-close"></span>
+                    </div>
+                    <div class="col s-6 m-3">
+                        <select name="" id="">
+                      <option value="">Усi заходи</option>
+                      <option value="">Фестиваль</option>
+                      <option value="">Ярмарок</option>
+                      <option value="">Концерт</option>
+                      <option value="">Спорт</option>
+                      <option value="">Вистава</option>
+                      <option value="">Свято</option>
+                    </select>
+                    </div>
+                    <div class="col s-6 m-3">
+                        <input type="submit" class="btn" value="ЗНАЙТИ">
+                    </div>
+                </form>
+            </div>
+            <!-- ====================================================filters-->
+            <div class="bg_gr">
+                <div class="block_wrap">
+                    <div class="hdr h2 txt_c">Найкраще у місті</div>
+                    <div class="txt_c">Новини та ТОП 20</div>
+                    <div class="rss"></div>
+                    <div class="grid news_blocks">
+
+                        <div class="col s-6 l-4">
+                            <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                                <a href="#"></a>
+                                <span class="icon-location news_bg">test</span>
+                                <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                <div class="news_block_info news_bg">
+                                    <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    <span>благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку, дитячий будинок</span>
+                                    <em>Детальнiше <span class="icon-next_circle"></span></em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s-6 l-4">
+                            <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                                <a href="#"></a>
+                                <span class="icon-location news_bg">test</span>
+                                <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                <div class="news_block_info news_bg">
+                                    <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    <span>благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку, дитячий будинок</span>
+                                    <em>Детальнiше <span class="icon-next_circle"></span></em>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s-6 l-4">
+                            <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                                <a href="#"></a>
+                                <span class="icon-location news_bg">test</span>
+                                <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                <div class="news_block_info news_bg">
+                                    <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    <span>благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку, дитячий будинок</span>
+                                    <em>Детальнiше <span class="icon-next_circle"></span></em>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="txt_c">
+                        <a href="#" class="read_more">ПОКАЗАТИ ЩЕ <span class="icon-next_circle"></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- =====================================================best-->
+            <div class="block_wrap">
+
+                <div class="hdr h2 txt_c">Kyiv City Package</div>
+                <div class="txt_c">Найкращі пропозиції Києва зі знижкою</div>
+                <div class="rss"></div>
+
+                <ul class="slider_wide" id="package_slider">
+                    <li class="col" style="background-image: url(tmp/1.jpg)">
+                        <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                            <a href="#"></a>
+                            <span class=" news_bg">card</span>
+                            <strong>Посольства 38 країн запрошують на благодійний ярмарок </strong>
+                            <div class="social_box">
+                                <a class="icon-facebook" href=""></a>
+                                <a class="icon-twitter" href=""></a>
+                                <a class="icon-instagram" href=""></a>
+                                <a class="icon-vk" href=""></a>
+                            </div>
+                            <div class="news_block_info news_bg">
+                                <strong>Посольства 38 країн запрошують на благодійний ярмарок <div class="h1">-50<sup>%</sup></div></strong>
+                                <span>благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку, дитячий будинок</span>
+                                <div class="date">10 – 22 грудня 2016</div>
+                                <div class="time icon-hourglass">2:24:38</div>
+                                <em>Детальнiше <span class="icon-next_circle"></span></em>
+                            </div>
+                            <div class="news_block_info narrow news_bg">
+                                <div class="h1">-50<sup>%</sup></div>
+                                <div class="time icon-hourglass">2:24:38</div>
+                                <div class="narrow_bttm">
+                                    <small>Отримали знижку:</small>
+                                    <div class="h1">138</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col" style="background-image: url(tmp/2.jpg)">
+                        <li style="background-image: url(tmp/1.jpg)">
+                            <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                                <a href="#"></a>
+                                <span class=" news_bg">card</span>
+                                <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                <div class="social_box">
+                                    <a class="icon-facebook" href=""></a>
+                                    <a class="icon-twitter" href=""></a>
+                                    <a class="icon-instagram" href=""></a>
+                                    <a class="icon-vk" href=""></a>
+                                </div>
+                                <div class="news_block_info news_bg">
+                                    <strong>Посольства 38 країн запрошують на благодійний ярмарок <div class="h1">-50<sup>%</sup></div></strong>
+                                    <span>благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку, дитячий будинок</span>
+                                    <div class="date">10 – 22 грудня 2016</div>
+                                    <div class="time icon-hourglass">2:24:38</div>
+                                    <em>Детальнiше <span class="icon-next_circle"></span></em>
+                                </div>
+                                <div class="news_block_info narrow news_bg">
+                                    <div class="h1">-50<sup>%</sup></div>
+                                    <div class="time icon-hourglass">2:24:38</div>
+                                    <div class="narrow_bttm">
+                                        <small>Отримали знижку:</small>
+                                        <div class="h1">138</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="background-image: url(tmp/1.jpg)">111</li>
+                </ul>
+                <br>
+                <div class="txt_c">
+                    <a href="#" class="read_more">ПОКАЗАТИ ЩЕ <span class="icon-next_circle"></span></a>
+                </div>
+            </div>
+            <!-- =====================================================best-->
+            <div class="hdr h2 txt_c">Мандруй Києвом</div>
+            <div class="txt_c">Маршрути та локації</div>
+            <div class="rss"></div>
+
+            <ul class="slider_wide txt_r" id="locations_slider">
+                <li style="background-image: url(tmp/1.jpg)">
+                    <div class="block_wrap">
+                        <time class="icon-location">3 грудня – 3 грудня</time>
+                        <div class="h2">Посольства 38 країн запрошують на благодійний ярмарок <br></div>
+                        <a href="#" class="btn brdr clr_white">Детальнiше</a>
+                        <div class="social_box">
+                            <a class="icon-facebook" href=""></a>
+                            <a class="icon-twitter" href=""></a>
+                            <a class="icon-instagram" href=""></a>
+                            <a class="icon-vk" href=""></a>
+                        </div>
+                        <div class="slide_num">
+                            <strong></strong>
+                            <sup></sup>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url(tmp/2.jpg)">111</li>
+                <li style="background-image: url(tmp/1.jpg)">111</li>
+            </ul>
+            <!-- ========================================================slider-->
+
+            <div class="block_wrap">
+                <div class="grid">
+                    <div class="col m-5">
+                        <div class="grid txt_j margin0 v_base">
+                            <strong class="hdr h6"><em class="h3 icon-youtube hdr"></em> YOUTUBE</strong>
+                            <small>#KyivTour</small>
+                        </div>
+                        <div class="video_block">
+                            <iframe src="https://www.youtube.com/embed/TvpA3Xg1lcc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="txt_c hdr h6">
+                            <a href="#" class="read_more">ППЕРЕГЛЯНУТИ ВИДЕО ПРО КИЇВ <span class="icon-next_circle"></span></a>
+                        </div>
+                    </div>
+                    <div class="col m-5 m-gap-2">
+                        <div class="grid txt_j margin0 v_base">
+                            <strong class="hdr h6"><em class="h3 icon-camera2"></em> ФОТОГАЛЕРЕЯ</strong> <small>@visitkyiv.travel</small></div>
+
+                        <div class="grid ftr_photos margin0">
+                            <div class="col xx-4" style="background-image: url(http://visitkyiv.travel/tpl_new/images/slider/fullimage1.jpg); "></div>
+                            <div class="col xx-4" style="background-image: url(http://visitkyiv.travel/tpl_new/images/slider/fullimage2.jpg); "></div>
+                            <div class="col xx-4" style="background-image: url(http://visitkyiv.travel/tpl_new/images/slider/fullimage3.jpg); "></div>
+                            <div class="col xx-4" style="background-image: url(http://visitkyiv.travel/tpl_new/images/slider/fullimage4.jpg); "></div>
+                            <div class="col xx-4" style="background-image: url(http://visitkyiv.travel/assets/cache/images/1600x880-00021.12a.jpg);"></div>
+                            <div class="col xx-4" style="background-image: url(http://visitkyiv.travel/assets/cache/images/locations/1600x880-pirogoshhoi.12a.jpg); "></div>
+                        </div>
+                        <div class="txt_c hdr h6">
+                            <a href="#" class="read_more">ПЕРЕГЛЯНУТИ ФОТО ПРО КИЇВ <span class="icon-next_circle"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//====================-->
+            <footer>
+                <div class="grid footer_socials">
+                    <div class="col s-3">
+                        <a class="icon-vk" href="#"></a>
+                    </div>
+                    <div class="col s-3">
+                        <a class="icon-facebook" href="#"></a>
+                    </div>
+                    <div class="col s-3">
+                        <a class="icon-twitter" href="#"></a>
+                    </div>
+                    <div class="col s-3">
+                        <a class="icon-instagram" href="#"></a>
+                    </div>
+                </div>
+
+                <div class="block_wrap">
+                    <div class="grid">
+                        <div class="col s-6">
+                            <div class="h4 hdr">ОТРИМАТИ ПІДПИСКУ</div>
+                            <div>Підпишись на нашу розсилку та будь у курсі усіх подій міста!</div>
+                            <form class="ftr_subscr">
+                                <input type="text">
+                                <span class="h4 icon-next"></span>
+                            </form>
+                        </div>
+                        <div class="col s-5 s-gap-1 ftr_menu">
+                            <ul>
+                                <li>
+                                    <a href="#"><strong>Афіша</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#">Відпочинок</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kyiv City Package</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маршрути</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--block_wrap-->
+                <div class="nav">
+                    <ul class="grid txt_c fluid">
+                        <li class="col">
+                            <a href="#">MEDIA</a>
+                        </li>
+                        <li class="col">
+                            <a href="#">TRAVEL MARKET</a>
+                        </li>
+                        <li class="col">
+                            <a href="#">CONVENTION BUREAU</a>
+                        </li>
+                        <li class="col">
+                            <a href="#">TOURISTIC CENTRES</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </footer>
+
+        </div>
+    </div>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons/style.css">
+    <link rel="stylesheet" href="css/lightslider.min.css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="js/fancy/jquery.fancybox.css">
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/fancy/jquery.fancybox.js"></script>
+    <script src="js/lightslider.min.js"></script>
+    <script src="js/jquery.datetimepicker.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+@import "../base/vars";
+//============================================= news_block
+.profile_wrap {
+    background: #f4f4f4;
+    margin: $colGap*2 0;
+}
+.profile_menu, .profile_ads {
+    background: #474646;
+    padding-top: $colGap;
+}
+.profile_menu a {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: .9em;
+    display: block;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.profile_menu-av img {}
+.profile_ads {
+    .news_block {}
+}

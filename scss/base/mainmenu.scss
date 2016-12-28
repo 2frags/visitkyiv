@@ -1,0 +1,82 @@
+@import "vars";
+.js-main_wrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+}
+.js_inner_wrap {
+    width: 100%;
+    min-height: inherit;
+    position: relative;
+    left: 0;
+    @include transition(left .3s ease-in-out);
+    &:before {
+        content: '';
+        position: absolute;
+        background: #000;
+        opacity: 0;
+        @include transition(opacity .3s ease-in-out);
+    }
+}
+.js-menu #mainmenu {
+    background: inherit;
+}
+.js-menu_on {
+    .js_inner_wrap {
+        left: $menu_fixed_W;
+        &:before {
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 999;
+            opacity: .3;
+        }
+    }
+    &.js-menu #mainmenu {
+        left: 0;
+        @include shadow(0px, 4px, 10px, #333);
+    }
+}
+#mainmenu {
+    display: inline-block;
+}
+//----------------------- !!! styles for mobile mainmenu
+.js-menu #mainmenu {
+    left: -$menu_fixed_W;
+    @include transition(left .3s ease-in-out);
+    // background: $bg_2;
+    // top: $page_hdr_H;
+    top: 0px;
+    overflow-y: auto;
+    padding: $colGap 0 0 0;
+    margin: 0px;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    width: $menu_fixed_W;
+    li {
+        display: block;
+    }
+    a {
+        text-align: left;
+    }
+}
+// @if $menu_dark {
+//     .js-menu #mainmenu {
+//         background: $txt_dark;
+//     }
+//     .js-menu #mainmenu a {
+//         color: #ddd;
+//         border-bottom: rgba(255, 255, 255, .1) 1px solid;
+//     }
+// } @else {    
+//     .js-menu #mainmenu {
+//         background: $txt_dark;
+//     }
+//     .js-menu #mainmenu a {
+//         color: #ddd;
+//         border-bottom: rgba(0, 0, 0, .05) 1px solid;
+//     }
+// }

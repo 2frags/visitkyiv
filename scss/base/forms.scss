@@ -1,0 +1,258 @@
+@import "vars";
+.form {
+    &.grid, &>.grid {
+        margin-bottom: $colGap;
+        text-align: left;
+        ;
+    }
+    .col {
+        margin-bottom: $colGap/2;
+        margin-top: $colGap/2;
+        &.v_top {
+            vertical-align: top;
+            &:before {
+                display: block;
+                height: .6em;
+            }
+        }
+    }
+    //------------------------- form sizes
+    &.h1, &.h2, &.h3, &.h4, &.h5 {
+        margin: 0px;
+        line-height: normal;
+    }
+    &.h1 .col {
+        font-size: $h1f;
+    }
+    &.h2 .col {
+        font-size: $h2f;
+    }
+    &.h3 .col {
+        font-size: $h3f;
+    }
+    &.h4 .col {
+        font-size: $h4f;
+    }
+    &.h5 .col {
+        font-size: $h5f;
+    }
+    .col {
+        vertical-align: middle;
+    }
+    &_line, &_group {
+        font-size: 0;
+        &.h1, &.h2, &.h3 {
+            font-size: 0;
+        }
+        &.h1>* {
+            font-size: $h1f;
+        }
+        &.h2>* {
+            font-size: $h2f;
+        }
+        &.h3>* {
+            font-size: $h3f;
+        }
+        &.h4>* {
+            font-size: $h4f;
+        }
+        &.h5>* {
+            font-size: $h5f;
+        }
+    }
+}
+.v_top {
+    .col {
+        vertical-align: top;
+    }
+}
+label {
+    vertical-align: middle;
+    line-height: 1em;
+    text-align: left;
+    color: $txt_mid;
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+}
+input, textarea, select {
+    // padding-left:$colGap; padding-right: $colGap;
+    border: 1px solid $table_brdr;
+    background: transparent;
+    @include rounded($rnd);
+    color: $txt_mid;
+    @include transition(border ease-in-out .15s);
+    &:focus {
+        outline: 0;
+        border-color: $f_active;
+    }
+    &::-webkit-input-placeholder {
+        color: $txt_mid;
+        text-overflow: ellipsis;
+    }
+    &:-ms-input-placeholder {
+        color: $txt_mid;
+        text-overflow: ellipsis;
+    }
+}
+input, select, textarea {
+    width: 100%;
+}
+input, .btn, select, textarea {
+    padding: $fld_padd_v $fld_padd_h;
+    font-family: $font;
+}
+@media all and (-ms-high-contrast: none) {
+    select {
+        padding-top: .35em !important;
+        padding-bottom: .35em !important;
+    }
+    /* IE10 */
+    *::-ms-backdrop, select {
+        padding-top: .35em !important;
+        padding-bottom: .35em !important;
+    }
+    /* IE11 */
+}
+.btn:not(:empty):before {
+    padding-right: .3em;
+}
+//--------------------------------------------------------------------------------- select
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    padding-right: 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: 99% 50% !important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M10%2015L5.67%207.5L14.33%207.5z%22%20fill%3D%22%23c0c0c0%22/%3E%3C/svg%3E") !important;
+}
+select::-ms-expand {
+    /* for IE 11 */
+    display: none;
+}
+option {
+    padding-right: 20px;
+}
+//--------------------------------------------------------------------------------- radios checkboxes
+input[type="checkbox"], input[type="radio"] {
+    display: none;
+    &+label {
+        position: relative;
+        display: inline-block;
+        padding-left: 1.3em;
+        line-height: .9em;
+        vertical-align: baseline;
+        cursor: pointer;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 55%;
+            margin-top: -.5em;
+        }
+        &:before {
+            width: 1em;
+            height: 1em;
+            border: $table_brdr 1px solid;
+            @include transition(border ease-in-out .15s);
+        }
+    }
+    &:checked+label {
+        &:before {
+            border-color: $f_active;
+        }
+    }
+}
+input[type="radio"] {
+    &:checked+label:before {
+        border: $f_active 5px solid;
+    }
+    &+label:before {
+        @include rounded(50%);
+    }
+}
+input[type="checkbox"] {
+    &:checked+label:before {
+        border: $f_active 1px solid;
+    }
+    &+label:after {
+        width: .3em;
+        height: .6em;
+        margin: -.35em 0 0 .35em;
+        border-right: transparent 3px solid;
+        border-bottom: transparent 3px solid;
+        @include rotate(45);
+        @include transition(all ease-in-out .2s);
+    }
+    &:checked+label:after {
+        border-right: $f_active 3px solid;
+        border-bottom: $f_active 3px solid;
+    }
+}
+//---------------------------------------------------------------------------- FORM GROUP
+.form_group {
+    &>* {
+        @include rounded(0);
+        position: relative;
+        margin-top: -1px;
+        @if $rnd !=0 {
+            &:first-child {
+                @include rounded($rnd $rnd 0 0);
+            }
+            &:last-child {
+                @include rounded(0 0 $rnd $rnd);
+            }
+        }
+        &:focus {
+            z-index: 3;
+        }
+    }
+}
+//---------------------------------------------------------------------------- FORM LINE
+.form_line {
+    text-align: left;
+    &>.btn:not[class=brdr] {
+        border-left-color: rgba(255, 255, 255, .5);
+    }
+    &>.btn, &>input {
+        @include rounded(0);
+    }
+    &>* {
+        position: relative;
+        &:not(:last-child) {
+            border-right-color: transparent !important;
+        }
+        @if $rnd !=0 {
+            &:first-child {
+                @include rounded($rnd 0 0 $rnd);
+            }
+            &:last-child {
+                @include rounded(0 $rnd $rnd 0);
+            }
+        }
+        &:focus {
+            z-index: 3;
+            &+input, &+select {
+                border-left-color: $f_active;
+            }
+        }
+    }
+}
+//---------------------------------------------------------------------------- PLACEHOLDER
+@include placeholder {
+    color: #ddd;
+    font-weight: 100;
+    text-overflow: ellipsis;
+    text-indent: 0px;
+    @include transition(text-indent ease-in-out .4s);
+}
+input:focus {
+    @include placeholder {
+        text-indent: 600px;
+    }
+}
