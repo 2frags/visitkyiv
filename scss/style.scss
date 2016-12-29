@@ -2,6 +2,7 @@
 @import "style/news";
 @import "style/sliders";
 @import "style/profile";
+@import "style/route";
 .block_wrap {
     margin: 0 auto;
     max-width: $xl;
@@ -18,9 +19,14 @@
 // .col {
 //     letter-spacing: 1px;
 // }
+
 .bg_gr {
     background: #fcfcfc;
 }
+.bg_darkgr {
+    background: #f9f9f9;
+}
+
 .hdr_top {
     border-bottom: $table_brdr 1px solid;
 }
@@ -215,12 +221,38 @@ footer {
     color: #eee;
     .nav {
         background: #f1f1f1;
+        li{
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                height: 26px;
+                width: 2px;
+                margin-top: -13px;
+                background: #b8b8b8;
+            }
+            &:last-child{
+                &:after
+                {
+                    display: none;
+                }
+            }
+        }
         a {
             display: block;
             font-weight: 100;
             padding: 20px 20px;
             color: #777;
+            &:hover{
+                text-decoration: underline;
+            }
         }
+    }
+    .hdr.h4{
+        font-size: 1.1rem;
+        margin-top: 2rem;
     }
 }
 .ftr_photos {
@@ -229,6 +261,21 @@ footer {
         background-position: 50%;
         height: 15vw;
         max-height: 180px;
+    }
+}
+.ftr {
+    &_underbottom {
+        color: #a5a5a5;
+        .logo {
+            background: url(../img/logo.png) 50% no-repeat;
+            background-size: contain;
+            height: 40px;
+            max-width: 200px;
+            display: block;
+        }
+        &_text {
+            padding-top: 10px;
+        }
     }
 }
 .video_block {
@@ -248,43 +295,54 @@ footer {
     .icon-next {
         position: absolute;
         right: 5px;
-        top: 5px;
+        top: 7px;
         color: #777;
     }
     input {
         background: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
-.ftr_menu li {
-    list-style-type: none;
-    a {
-        color: #eee;
-        padding: 10px 0;
-        display: block;
-    }
-}
-.footer_socials {
-    .col {
-        border-left: #fff 2px solid;
-        border-bottom: #fff 2px solid;
-        &:first-of-type {
-            border-left: none;
-        }
-        &:hover {
-            &:hover {
-                background: #fff;
-                a {
-                    color: #555;
-                }
+.ftr_menu
+{
+    ul{
+        padding: 44px 0 0 0;
+        li {
+            list-style-type: none;
+            a {
+                color: #eee;
+                padding: 5px 0;
+                display: block;
             }
         }
     }
-    a {
-        color: #fff;
-        font-size: 1.4rem;
-        display: block;
-        padding: 8px;
-        text-align: center;
+}
+
+.footer
+{
+    &_top{
+        border-bottom: 1px solid #fff;
+    }
+    &_socials {
+        .col {
+            border-left: #fff 1px solid;
+            &:hover {
+                &:hover {
+                    background: #fff;
+                    a {
+                        color: #555;
+                    }
+                }
+            }
+        }
+        a {
+            color: #fff;
+            font-size: 1.4rem;
+            display: block;
+            padding: 15px;
+            text-align: center;
+        }
     }
 }
 //================================= queries 
