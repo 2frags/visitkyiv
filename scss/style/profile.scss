@@ -7,19 +7,37 @@
 .profile_menu, .profile_ads {
     background: #474646;
     padding-top: $colGap;
+    padding-bottom: $colGap;
 }
 .profile_menu a {
     color: #fff;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     line-height: .9em;
+    font-size: .9rem;
     display: block;
+    vertical-align: middle;
     img {
         display: block;
         margin: 0 auto;
     }
 }
-.profile_menu-av img {}
+.profile_menu a img {
+    max-width: 11%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
 .profile_ads {
     .news_block {}
+}
+//--------------- Queries
+@include mquery(min-width, $s) {
+    .profile_menu a {
+        text-align: center;
+        img {
+            max-width: 100%;
+            margin-bottom: 0px;
+        }
+    }
 }
