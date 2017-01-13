@@ -100,7 +100,7 @@ $(document).ready(function() {
         pause: 4000,
         auto: true
     });
-    $('#locations_slider').lightSlider({
+    $('#locations_slider, #locations_slider2').lightSlider({
         item: 1,
         slideMargin: 0,
         pager: false,
