@@ -197,6 +197,14 @@
     }
     &_desc{
       padding: 12px 0 0;
+      ul{
+        margin: 10px 0 0 15px;
+        li{
+          padding: 0;
+          margin: 0;
+          font-size:.875rem
+        }
+      }
     }
   }
   &_status{

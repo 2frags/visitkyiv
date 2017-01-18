@@ -34,12 +34,15 @@
   }
   &-map
   {
-    margin: 10px 0 0 0;
+    margin: 10px 0 10px 0;
     #map-canvas{
       height: 192px;
     }
   }
   &_right{
+    .loc_block_info{
+      margin: 0 0 17px 0;
+    }
     .loc_block_info_desc
     {
       padding-top: 0px;
@@ -63,6 +66,10 @@
     {
       margin-top: 22px;
     }
+    .smbottom-margin
+    {
+      margin-bottom: 9px;
+    }
   }
 }
 .abs_ico
@@ -71,5 +78,71 @@
   {
     top: 50%;
     margin-top: -14px;
+  }
+}
+
+.proposal-block
+{
+  .loc_block_info_title
+  {
+    color: #e74e0f;
+  }
+  &-item{
+    border: 1px solid #e6e6e6;
+    padding: 5px 1rem;
+    margin-bottom: 10px;
+    span{
+      font-size: 0.875em ;
+    }
+  }
+  &-name{
+    font-weight: 400;
+    color: #474646;
+  }
+  &-price{
+    color: #e74e0f;
+    font-weight: 400;
+  }
+  &-date{
+    font-size: 0.750em !important;
+    color: #b3b3b3;
+    padding-right: 10px;
+  }
+}
+.block-padded{
+  padding: 10px 0;
+  .hdr_middle
+  {
+    padding-bottom: 10px;
+  }
+}
+.eventblock{
+  margin: 0 0 15px 0;
+  &-date{
+    color: #0097d7;
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin: 0 0 7px 0;
+  }
+  &-item{
+    border-top: 1px solid #f1f1f1;
+    display: table;
+    width: 100%;
+  }
+  &-time{
+    color: #474646;
+    font-size: 1.125rem;
+    display: table-cell;
+    padding: 20px 10px;
+    width: 18%;
+    font-weight: 400;
+  }
+  &-desc{
+    display: table-cell;
+    padding: 20px 10px;
+    color: #808080;
+    font-weight: 300;
+    font-size:.875rem;
+    width: 82%;
   }
 }
