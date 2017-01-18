@@ -29,21 +29,24 @@
         font-size: 2.4rem;
     }
 }
-#locations_slider~.lSAction {
-    margin: 0 auto;
-    max-width: 80em;
-    padding: 1.2rem;
-    position: relative;
-    height: 0px;
-    padding: 0px;
-    a {
-        color: #fff;
-        font-size: 2.4rem;
-        top: -30px;
-    }
-    .lSNext {
-        right: auto;
-        left: 150px;
+#locations_slider, #locations_slider2
+{
+    &~.lSAction {
+        margin: 0 auto;
+        max-width: 80em;
+        padding: 1.2rem;
+        position: relative;
+        height: 0px;
+        padding: 0px;
+        a {
+            color: #fff;
+            font-size: 2.4rem;
+            top: -30px;
+        }
+        .lSNext {
+            right: auto;
+            left: 150px;
+        }
     }
 }
 .slider_wide li {
