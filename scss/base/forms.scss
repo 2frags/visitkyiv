@@ -3,11 +3,10 @@
     &.grid, &>.grid {
         margin-bottom: $colGap;
         text-align: left;
-        ;
     }
     .col {
-        margin-bottom: $colGap/2;
-        margin-top: $colGap/2;
+        margin-bottom: $colGap;
+        margin-top: $colGap;
         &.v_top {
             vertical-align: top;
             &:before {
@@ -78,6 +77,11 @@ label {
         height: 100%;
     }
 }
+.fld_white {
+    input, textarea, select {
+        background: #fff;
+    }
+}
 input, textarea, select {
     // padding-left:$colGap; padding-right: $colGap;
     border: 1px solid $table_brdr;
@@ -119,6 +123,19 @@ input, .btn, select, textarea {
 }
 .btn:not(:empty):before {
     padding-right: .3em;
+}
+//=============== password js
+.js-showpass.icon-eye {
+    position: relative;
+    &:before {
+        pointer-events: all;
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        margin-top: -.5em;
+        font-size: 1.2em;
+        color: inherit;
+    }
 }
 //--------------------------------------------------------------------------------- select
 select {

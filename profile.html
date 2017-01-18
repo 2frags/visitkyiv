@@ -71,71 +71,398 @@
             </div>
             <!--page_hdr-->
 
-            <div class="block_wrap">
+            <div class="block_wrap content">
                 <div class=" hdr h5">Мiй профiль</div>
                 <div class="grid profile_wrap">
-                    <div class="col s-2">
+                    <div class="col m-2">
                         <div class="profile_menu grid">
-                            <div class="profile_menu-av col xx-4 xs-2 s-12">
+                            <div class="profile_menu-av col xx-6 xs-3 m-12">
                                 <img src="tmp/noimg.png" alt="">
                             </div>
-                            <div class="col xx-12 s-12">
-                                <a href="#"><img src="img/icon_profile_user.png" alt=""> Мої дані</a>
+                            <div class=" xx-1 m0 profile_nav_btn">
+                                <div class="btn js-menu-btn icon-menu" data-target="#profile_nav"></div>
                             </div>
-                            <div class="col xx-12 s-12">
-                                <a href="#"><img src="img/icon_profile_cert.png" alt=""> Сертифiкати KYIVCITYPACKAGE</a>
-                            </div>
-                            <div class="col xx-12  s-12">
-                                <a href="#"><img src="img/icon_profile_card.png" alt=""> Моя електрона картка</a>
-                            </div>
-                            <div class="col xx-12  s-12">
-                                <a href="#"><img src="img/icon_profile_routes.png" alt=""> Мої маршрути</a>
-                            </div>
-                            <div class="col xx-12 s-12">
-                                <a href="#"><img src="img/icon_profile_uploads.png" alt=""> Мої завантаження</a>
+                            <div class="col  xx-12 xs-9 m-12">
+
+                                <div class=" nav relative" id="profile_nav">
+                                    <div class="grid">
+                                        <div class="col xx-12 li  js-panel hover" data-target="#my_data">
+                                            <img src="img/icon_profile_user.svg" alt=""> Мої дані
+                                        </div>
+                                        <div class="col xx-12 li js-panel" data-target="#my_cert">
+                                            <img src="img/icon_profile_cert.svg" alt=""> Сертифiкати KYIVCITYPACKAGE
+                                        </div>
+                                        <div class="col xx-12 li js-panel" data-target="#my_card">
+                                            <img src="img/icon_profile_card.svg" alt=""> Моя електрона картка
+                                        </div>
+                                        <div class="col xx-12 li js-panel" data-target="#my_data">
+                                            <img src="img/icon_profile_routes.svg" alt=""> Мої маршрути
+                                        </div>
+                                        <div class="col xx-12 li js-panel" data-target="#my_data">
+                                            <img src="img/icon_profile_uploads.svg" alt=""> Мої завантаження
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="profile_side_bg col m-2 left"></div>
                     <!--l-side-->
-                    <div class="col xs-9 l-7">
+                    <div class="col xs-12 m-10 l-7 fld_white">
+                        <div class="profile_tabs js-panels">
+                            <div id="my_data" class="on">
+                                <div class="my_data_top">
+                                    <div><strong>Анатолій Рубенштейн</strong></div>
+                                    <div>qwerty12345@gmail.com <span class="icon-check"></span></div>
+                                    <div class=" disabled">visitkyiv ID: 123151111</div>
+                                </div>
+                                <div class="hr"></div>
+                                <form action="" class="form">
+                                    <div class="grid">
+                                        <label class="col xs-5">Iм'я</label>
+                                        <div class="col xs-7">
+                                            <input type="text">
+                                        </div>
+                                        <label class="col xs-5">Фамiлiя</label>
+                                        <div class="col xs-7">
+                                            <input type="text">
+                                        </div>
+                                        <label class="col xs-5">Фамiлiя</label>
+                                        <div class="col xs-7">
+                                            <input type="text">
+                                        </div>
+                                        <label class="col xs-5">Email</label>
+                                        <div class="col xs-7">
+                                            <input type="text">
+                                        </div>
+                                        <label class="col xs-5">Пароль <a href="#"><small>Змiнити</small> </a></label>
+                                        <div class="col xs-7 js-showpass">
+                                            <input type="password">
+                                        </div>
+                                        <label class="col xs-5">Стать</label>
+                                        <div class="col fluid">
+                                            <input type="radio" name="sex" id="sex_m">
+                                            <label for="sex_m">Чол.</label>
+                                        </div>
+                                        <div class="col xx-4 xs-3">
+                                            <input type="radio" name="sex" id="sex_f">
+                                            <label for="sex_f">Жiн.</label>
+                                        </div>
+
+                                        <label class="col xs-5">Вiк</label>
+                                        <div class="col xs-7">
+                                            <select name="" id="">
+                                                <option value="">18</option>
+                                                <option value="">19</option>
+                                                <option value="">20</option>
+                                            </select>
+                                        </div>
+                                        <label class="col xs-5">Країна реєстрацiї</label>
+                                        <div class="col xs-7">
+                                            <select name="" id="">
+                                                <option value="">Польща</option>
+                                                <option value="">Китай</option>
+                                                <option value="">США</option>
+                                            </select>
+                                        </div>
+                                        <label class="col xs-5">Регiон реєстрацiї</label>
+                                        <div class="col xs-7">
+                                            <select name="" id="">
+                                                <option value="">Регiон 1</option>
+                                                <option value="">Регiон 2</option>
+                                                <option value="">Регiон 3</option>
+                                            </select>
+                                        </div>
+                                        <label class="col xs-5">Як часто ви вiдвiдуєте Україну</label>
+                                        <div class="col xs-7">
+                                            <select name="" id="">
+                                                <option value="">Перший раз</option>
+                                                <option value="">Вдруге</option>
+                                                <option value="">Вчетверте</option>
+                                            </select>
+                                        </div>
+                                        <div class="col xs-gap-5 xs-7">
+                                            <div class="btn">ЗБЕРЕГТИ</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--my_data-->
+                            <div id="my_cert">
+                                <div class="hdr h6 txt_c"><strong>МОЇ СЕРТИФІКАТИ KYIV CITY PACKAGE</strong> </div>
+                                <div class="hr"></div>
+
+                                <div class="profile_card ">
+                                    <div class="icon-down js-menu-btn" data-target="#cert_12343">
+                                        <strong> Cертифікат Kyiv City Package <span class="txt_active"> No 12343</span></strong> <time class="fl_r">01 грудня 2016</time>
+                                    </div>
+                                    <div class="profile_card_info relative" id="cert_12343">
+                                        <p>
+                                            <span>Виданий користувачу з <strong>id:12345</strong></span>
+                                            <strong class="fl_r txt_ok">Активовано</strong>
+                                            <span>Користувач може скористатись пропозицією <strong>No 777 «Подорож по Дніпру»</strong></span>
+                                        </p>
+                                        <p>Знижка: <strong class="txt_active">50%</strong>
+                                            <br> Період: <strong class="txt_active">з 30.11.2016 по 31.01.2017</strong></p>
+                                        <div class="grid">
+                                            <div class="col xx-10">
+                                                <div class="hdr h6"><strong>Умови користування:</strong></div>
+                                                <ol>
+                                                    <li>Не більше 2-х людей</li>
+                                                    <li>Повідомити кількість людей за 4 дні до бажаної дати єкскурсії</li>
+                                                </ol>
+                                                <div>Конактні данні представника: <strong class="txt_active">044 666 56 43</strong></div>
+                                            </div>
+                                            <div class="col xx-2">
+                                                <img src="tmp/qr.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="profile_card_footer txt_r">
+                                            <a href="#">Завантажити сертифікат</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profile_card ">
+                                    <div class="icon-down js-menu-btn" data-target="#cert_12348">
+                                        <strong> Cертифікат Kyiv City Package <span class="txt_active"> No 12348</span></strong> <time class="fl_r">01 грудня 2016</time>
+                                    </div>
+                                    <div class="profile_card_info relative" id="cert_12348">
+                                        <p>
+                                            <span>Виданий користувачу з <strong>id:12345</strong></span>
+                                            <strong class="fl_r txt_ok">Активовано</strong>
+                                            <span>Користувач може скористатись пропозицією <strong>No 777 «Подорож по Дніпру»</strong></span>
+                                        </p>
+                                        <p>Знижка: <strong class="txt_active">50%</strong>
+                                            <br> Період: <strong class="txt_active">з 30.11.2016 по 31.01.2017</strong></p>
+                                        <div class="grid">
+                                            <div class="col xx-10">
+                                                <div class="hdr h6"><strong>Умови користування:</strong></div>
+                                                <ol>
+                                                    <li>Не більше 2-х людей</li>
+                                                    <li>Повідомити кількість людей за 4 дні до бажаної дати єкскурсії</li>
+                                                </ol>
+                                                <div>Конактні данні представника: <strong class="txt_active">044 666 56 43</strong></div>
+                                            </div>
+                                            <div class="col xx-2">
+                                                <img src="tmp/qr.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="profile_card_footer txt_r">
+                                            <a href="#">Завантажити сертифікат</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--my_cert-->
+
+                            <div id="my_card">
+                                <a href="#" class="fl_r"><small class="txt_active">Що таке ID картка?</small> </a>
+                                <div class="hdr h6 txt_c"><strong> МОЯ ID картка</strong> </div>
+                                <div class="hr"></div>
+                                <div class="profile_card txt_c">
+                                    <div class="hdr h6">ВЖЕ МАЕТЕ КАРТКУ?</div>
+                                </div>
+                                <p>Що таке ID картка?</p>
+                                <p>Конактні данні представника: <strong class="txt_active">044 666 56 43</strong></p>
+                                <div class="hr"></div>
+                                <a href="#" class="fl_r">Завантажити сертифікат</a>
+                            </div>
+                            <!--my_card-->
+
+                        </div>
 
                     </div>
                     <!--main content-->
-                    <div class="col xx-12 l-3">
+                    <div class="col xx-12 l-3 ">
+                        <div class="grid">
+                            <div class="offers_hdr col">Краще від kyiv city package</div>
+                        </div>
                         <div class="profile_ads grid">
-                            <div class="col xx-6 l-12">
-                                <div class="news_block " style="background-image: url(tmp/2.jpg)">
-                                    <a href="#"></a>
-                                    <span class="icon-location news_bg">test</span>
-                                    <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                            <div id="offers_slider">
+                                <div>
+                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class="icon-location news_bg">test</span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
                                 </div>
-                                <!--news_block-->
-                            </div>
-                            <div class="col xx-6 l-12">
-                                <div class="news_block " style="background-image: url(tmp/2.jpg)">
-                                    <a href="#"></a>
-                                    <span class="icon-location news_bg">test</span>
-                                    <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                <div>
+                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class="icon-location news_bg">test</span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
                                 </div>
-                                <!--news_block-->
+                                <div>
+                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class="icon-location news_bg">test</span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
+                                </div>
+                                <div>
+                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class="icon-location news_bg">test</span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
+                                </div>
+                                <div>
+                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class="icon-location news_bg">test</span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="profile_side_bg col l-3 right"></div>
                     <!--right-->
                 </div>
             </div>
 
         </div>
     </div>
+    <!--//====================-->
+    <footer>
+        <div class="footer_top">
+            <div class="grid footer_socials">
+                <div class="col xx-3">
+                    <a class="icon-vk" href="#"></a>
+                </div>
+                <div class="col xx-3">
+                    <a class="icon-facebook" href="#"></a>
+                </div>
+                <div class="col xx-3">
+                    <a class="icon-twitter" href="#"></a>
+                </div>
+                <div class="col xx-3">
+                    <a class="icon-instagram" href="#"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="block_wrap">
+            <div class="grid">
+                <div class="col s-4">
+                    <div class="h4 hdr">ОТРИМАТИ ПІДПИСКУ</div>
+                    <div>Підпишись на нашу розсилку та будь у курсі усіх подій міста!</div>
+                    <form class="ftr_subscr">
+                        <input type="text">
+                        <span class="h4 icon-next"></span>
+                    </form>
+                </div>
+                <div class="col s-2 s-gap-2 ftr_menu">
+                    <ul>
+                        <li>
+                            <a href="#"><strong>Афіша</strong></a>
+                        </li>
+                        <li>
+                            <a href="#">Відпочинок</a>
+                        </li>
+                        <li>
+                            <a href="#">Kyiv City Package</a>
+                        </li>
+                        <li>
+                            <a href="#">Маршрути</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col s-2 ftr_menu">
+                    <ul>
+                        <li>
+                            <a href="#"><strong>Афіша</strong></a>
+                        </li>
+                        <li>
+                            <a href="#">Відпочинок</a>
+                        </li>
+                        <li>
+                            <a href="#">Kyiv City Package</a>
+                        </li>
+                        <li>
+                            <a href="#">Маршрути</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col s-2 ftr_menu">
+                    <ul>
+                        <li>
+                            <a href="#"><strong>Афіша</strong></a>
+                        </li>
+                        <li>
+                            <a href="#">Відпочинок</a>
+                        </li>
+                        <li>
+                            <a href="#">Kyiv City Package</a>
+                        </li>
+                        <li>
+                            <a href="#">Маршрути</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--block_wrap-->
+        <div class="nav">
+            <ul class="grid txt_c fluid">
+                <li class="col">
+                    <a href="#">MEDIA</a>
+                </li>
+                <li class="col">
+                    <a href="#">TRAVEL MARKET</a>
+                </li>
+                <li class="col">
+                    <a href="#">CONVENTION BUREAU</a>
+                </li>
+                <li class="col">
+                    <a href="#">TOURISTIC CENTRES</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+    <div class="ftr_underbottom">
+        <div class="block_wrap">
+            <div class="grid">
+                <div class="s-4 l-2 m-2">
+                    <a href="#" class="logo"></a>
+                </div>
+                <div class="s-8 xs-12 txt_l">
+                    <div class="ftr_underbottom_text">© 2016 Офіційний сайт Управління туризму КМДА, Усі права захищено</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/icons/style.css">
+
     <link rel="stylesheet" href="css/lightslider.min.css">
+
     <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="js/fancy/jquery.fancybox.css">
     <script src="js/jquery-1.12.1.min.js"></script>
     <script src="js/fancy/jquery.fancybox.js"></script>
+
     <script src="js/lightslider.min.js"></script>
+
     <script src="js/jquery.datetimepicker.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/main.js"></script>
 </body>

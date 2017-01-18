@@ -1,43 +1,227 @@
-@import "../base/vars";
-//============================================= news_block
-.profile_wrap {
-    background: #f4f4f4;
-    margin: $colGap*2 0;
-}
-.profile_menu, .profile_ads {
-    background: #474646;
-    padding-top: $colGap;
-    padding-bottom: $colGap;
-}
-.profile_menu a {
-    color: #fff;
-    text-align: left;
-    text-transform: uppercase;
-    line-height: .9em;
-    font-size: .9rem;
-    display: block;
-    vertical-align: middle;
-    img {
-        display: block;
-        margin: 0 auto;
+    @import "../base/vars";
+    $side_panel_bg: #474646;
+    //============================================= news_block
+    .profile_wrap {
+        background: #f4f4f4;
+        margin: $colGap*2 0;
     }
-}
-.profile_menu a img {
-    max-width: 11%;
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 10px;
-}
-.profile_ads {
-    .news_block {}
-}
-//--------------- Queries
-@include mquery(min-width, $s) {
-    .profile_menu a {
-        text-align: center;
+    .profile_menu, .profile_ads {
+        padding-top: $colGap;
+        padding-bottom: $colGap;
+        background: $side_panel_bg;
+        z-index: 1;
+    }
+    .profile_ads {
+        padding-left: $colGap*3;
+        padding-right: $colGap*3;
+    }
+    .profile_menu .li {
+        color: #fff;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: .9em;
+        font-size: .9rem;
+        vertical-align: middle;
+        padding-bottom: $colGap/2;
+        padding-top: $colGap/2;
+        cursor: pointer;
         img {
-            max-width: 100%;
-            margin-bottom: 0px;
+            max-width: 12%;
+            display: inline-block;
+            vertical-align: middle;
+            filter: gray;
+            filter: grayscale(1);
+            transition: .5s ease-in-out;
+        }
+        &:hover, &.hover {
+            color: $active;
+            background: #333;
+            @include transition(all ease-in-out .3s);
+            img {
+                filter: none;
+                filter: grayscale(0);
+            }
         }
     }
-}
+    .profile_nav_btn+.js-menu_on:before {
+        display: none;
+    }
+    .profile_nav_btn {
+        position: absolute;
+        text-align: right;
+        right: $colGap;
+        z-index: 20;
+    }
+    .js-panels {
+        &>* {
+            display: none;
+        }
+        &>.on {
+            display: block;
+        }
+    }
+    .profile_side_bg {
+        position: absolute;
+        background: $side_panel_bg;
+        bottom: 0px;
+        z-index: 0;
+        &.right {
+            right: 0px;
+        }
+        &.left {
+            left: 0px;
+        }
+    }
+    .profile_tabs {
+        .hr {
+            margin: 0 0 $colGap*2 0;
+        }
+    }
+    .profile_card {
+        border: $table_brdr 1px solid;
+        background: #fff;
+        margin: 0 0 $colGap*2 0;
+        &:before {
+            position: absolute;
+        }
+        &>* {
+            padding: $colGap;
+        }
+        &>div:first-of-type {
+            cursor: pointer;
+        }
+        time.fl_r {
+            color: $txt_light;
+            line-height: 1.8em;
+        }
+        .js-menu-btn:before {
+            color: $active;
+            font-size: 1.8em;
+        }
+    }
+    .profile_card_info {
+        display: none;
+        border-top: $table_brdr 1px solid;
+        // padding: $colGap $colGap 0 $colGap;
+    }
+    .profile_card_footer {
+        border-top: $table_brdr 1px solid;
+        margin: -$colGap;
+        margin-top: $colGap;
+        padding: $colGap;
+        a {
+            text-decoration: underline;
+            color: #333;
+            font-weight: 400;
+        }
+    }
+    .my_data_top {
+        padding: $colGap;
+        &>* {
+            margin: 12px 0;
+        }
+        .icon-check {
+            color: #fff;
+            border-radius: 50%;
+            background: $clr_ok;
+            padding: 3px;
+            vertical-align: middle;
+            width: 23px;
+            height: 23px;
+            display: inline-block;
+        }
+    }
+    #offers_slider {
+        // margin: 0px;
+        .news_block {
+            height: 200px;
+            margin: 10px;
+            &:hover * {
+                opacity: 1;
+            }
+        }
+        .slick-arrow {
+            position: absolute;
+            z-index: 100;
+            color: #fff;
+            top: 50%;
+            font-size: 2.6rem;
+        }
+        &.slick-vertical {
+            .slick-arrow {
+                position: relative;
+                left: 50%;
+                top: auto;
+                margin-left: -1.3rem;
+            }
+        }
+        .icon-down {
+            margin: -$colGap*3 0 -$colGap 0;
+        }
+        .icon-up {
+            margin: -$colGap 0;
+        }
+        .icon-prev {}
+    }
+    .offers_hdr {
+        position: relative;
+        z-index: 100;
+        color: #fff;
+        background: $side_panel_bg;
+        border-bottom: #fff 1px solid;
+        padding: $colGap;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    //--------------- Queries
+    @include mquery(min-width, $s) {
+        .profile_menu .li {
+            img {
+                max-width: 10%;
+            }
+        }
+    }
+    @include mquery(min-width, $m) {
+        #offers_slider>* {
+            height: auto;
+        }
+        .profile_side_bg.left {
+            top: 0px;
+            max-width: 160px;
+        }
+        .profile_tabs {
+            padding: 0 $colGap*4;
+        }
+        .profile_menu {
+            max-width: 160px;
+        }
+        .profile_menu .li {
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: $colGap;
+            img {
+                margin: 0 auto;
+                display: block;
+                max-width: 100%;
+                margin-bottom: -5px;
+            }
+        }
+    }
+    @include mquery(min-width, $l) {
+        #offers_slider {
+            .news_block {
+                height: 200px;
+                margin: 0 0 20px 0;
+            }
+        }
+        .profile_ads {
+            padding-left: $colGap;
+            padding-right: $colGap;
+        }
+        .profile_side_bg.right {
+            top: 0px;
+        }
+        .profile_tabs {
+            padding-left: 0;
+        }
+    }

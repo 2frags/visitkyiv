@@ -78,7 +78,7 @@ a {
     color: $active;
 }
 [class*="content"] li {
-    margin: 0 0 $colGap $colGap*3;
+    margin: 0 0 $colGap $colGap*2;
 }
 ul, ol {
     margin: 0px;
@@ -93,8 +93,8 @@ ol {
             counter-increment: li;
             display: inline-block;
             width: $colGap*2;
-            margin-left: -$colGap*3;
-            margin-right: .3em;
+            margin-left: -$colGap*2;
+            // margin-right: .3em;
             color: $txt_light;
         }
     }
@@ -104,6 +104,34 @@ ol {
 }
 .block {
     display: block;
+}
+//------------colors
+.txt_white {
+    color: $clr_white
+}
+.txt_black {
+    color: $clr_black
+}
+.txt_dark {
+    color: $clr_dark
+}
+.txt_err {
+    color: $clr_err
+}
+.txt_warn {
+    color: $clr_warn
+}
+.txt_info {
+    color: $clr_info
+}
+.txt_info {
+    color: $clr_info
+}
+.txt_ok {
+    color: $clr_ok
+}
+.txt_active {
+    color: $active;
 }
 //-------------helpers
 .fl_l {

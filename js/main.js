@@ -24,10 +24,8 @@ $(document).ready(function() {
         $($el).each(function() {
             var target_menu = $(this).data('target');
             if (target_menu == mainmenu) {
-                //console.log(target_menu + ' - ' + mainmenu);
                 $(this).is(':visible') ? $('body').addClass('js-menu') : $('body').removeClass('js-menu');
             } else if (target_menu) {
-                //console.log(target_menu + ' ++ ');
                 $(this).is(':visible') ? $(target_menu).parent().addClass('js-menu_hide') : $(target_menu).attr('style', '').parent().removeClass('js-menu_hide js-menu_on');
             }
         });
@@ -41,25 +39,10 @@ $(document).ready(function() {
         e.stopPropagation();
     });
 
-    // $('.js-click_show').one('click', function() {
-    //     $(this).addClass('hide');
-    // })
     mainmenu_pos('.icon-menu');
-    // mainmenu_pos('#mainmenu_toggle');
-
-    // $('#mainmenu_toggle').click(function() {
-    //     $('body').toggleClass('js-menu_on');
-    // })
-
-    $(window).resize(function() {
-        mainmenu_pos('.icon-menu');
-        $('body').removeClass('js-menu_on');
-    })
-
     //=============== js hamburger menu
-    $('.icon-menu').on('click', function() {
+    $('.icon-menu, .js-menu-btn').on('click', function() {
             var target_menu = $(this).data('target');
-            console.log(target_menu + ' ' + $('body').attr('class'));
             if (target_menu == mainmenu) {
                 $('body').toggleClass('js-menu_on');
             } else if (target_menu) {
@@ -69,68 +52,111 @@ $(document).ready(function() {
         })
         //=============== tabs
     $('.tabs').on('click', ' dt:not(.on)', function() {
-        $(this).next('dd').slideToggle(500);
-        $(this).siblings('dt.on + dd').slideToggle(500);
-        $(this).addClass('on').siblings('dt').removeClass('on');
-    })
-
+            $(this).next('dd').slideToggle(500);
+            $(this).siblings('dt.on + dd').slideToggle(500);
+            $(this).addClass('on').siblings('dt').removeClass('on');
+        })
+        //=================== panels
+    $('.js-panel').on('click', function() {
+            var target_panel = $(this).data('target');
+            $(this).addClass('hover').siblings().removeClass('hover');
+            $(target_panel).fadeIn(200).addClass('on').siblings().hide().removeClass('on');
+        })
+        //==================== show password
+    $('.js-showpass input').on('keyup', function() {
+        if ($(this).val()) {
+            $(this).parent().addClass('icon-eye');
+        } else {
+            $(this).parent().removeClass('icon-eye');
+        }
+    });
+    $('.js-showpass').mousedown(function(e) {
+        if (e.target == this) {
+            $(this).find('input').attr('type', 'text');
+        }
+    }).on('mouseup mouseout', function() {
+        $(this).find('input').attr('type', 'password');
+    });
     //=========================================================================================== project
     //================== events_slider
-    $('#events_slider').lightSlider({
-        item: 1,
-        slideMargin: 0,
-        pager: false,
-        prevHtml: '<span class="icon-prev"></span>',
-        nextHtml: '<span class="icon-next"></span>',
-        loop: true,
-        cssEasing: 'ease',
-        speed: 800,
-        pause: 4000,
-        auto: true
-    });
-    $('#package_slider').lightSlider({
-        item: 1,
-        slideMargin: 0,
-        pager: false,
-        prevHtml: '<span class="icon-prev"></span>',
-        nextHtml: '<span class="icon-next"></span>',
-        loop: true,
-        cssEasing: 'ease',
-        speed: 800,
-        pause: 4000,
-        auto: true
-    });
-    $('#locations_slider, #locations_slider2').lightSlider({
-        item: 1,
-        slideMargin: 0,
-        pager: false,
-        prevHtml: '<span class="icon-prev"></span>',
-        nextHtml: '<span class="icon-next"></span>',
-        loop: true,
-        cssEasing: 'ease',
-        speed: 800,
-        pause: 4000,
-        auto: true
+    var $sliders = $(".slider_wide");
+    var $arrows = $('.arr_wrap');
+
+    $(".slide_count").each(function() {
+
+        var $this = $(this);
+        $this.find($sliders).on('init', function(event, slick) {
+            slidecount = (slick.slideCount < 10) ? '0' + slick.slideCount : slick.slideCount;
+            var curr_slide = slick.currentSlide + 1;
+            curr_slide = (curr_slide < 10) ? '0' + curr_slide : curr_slide;
+            $this.find('.arr_wrap').find('.slide_num span').text(curr_slide);
+            $this.find('.arr_wrap').find('.slide_num sup').text('/' + slidecount);
+        });
+        var slick = $this.find($sliders).slick({
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            appendArrows: $this.find($arrows),
+            prevArrow: '<span class="icon-prev"></span>',
+            nextArrow: '<span class="icon-next"></span>'
+        });
+        slick.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var curr_slide = nextSlide + 1;
+            curr_slide = (curr_slide < 10) ? '0' + curr_slide : curr_slide;
+            $this.find('.arr_wrap').find('.slide_num span').text(curr_slide);
+        });
+
     });
 
-    var totalItems = $('#events_slider li').length;
-    totalItems = $.trim(totalItems).length === 1 ? '0' + totalItems : totalItems;
-    $("#events_slider .slide_num sup").text('/' + totalItems);
-    $('#events_slider li').each(function(index) {
-        var itemIndex = index + 1;
-        itemIndex = $.trim(itemIndex).length === 1 ? '0' + itemIndex : itemIndex;
-        $(this).find(".slide_num strong").text(itemIndex);
-    })
 
-    var totalItems = $('#locations_slider li').length;
-    totalItems = $.trim(totalItems).length === 1 ? '0' + totalItems : totalItems;
-    $("#locations_slider .slide_num sup").text('/' + totalItems);
-    $('#locations_slider li').each(function(index) {
-            var itemIndex = index + 1;
-            itemIndex = $.trim(itemIndex).length === 1 ? '0' + itemIndex : itemIndex;
-            $(this).find(".slide_num strong").text(itemIndex);
-        })
-        //========================= datetimepicker
+    $('#package_slider').slick({
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        appendArrows: $("<div></div>").addClass("arr_wrap").insertAfter("#package_slider"),
+        prevArrow: '<span class="icon-prev"></span>',
+        nextArrow: '<span class="icon-next"></span>'
+    });
+
+
+    $('#offers_slider').slick({
+        autoplay: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<div class="icon-up"></div>',
+        nextArrow: '<div class="icon-down"></div>',
+        vertical: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    prevArrow: '<div class="icon-prev"></div>',
+                    nextArrow: '<div class="icon-next"></div>',
+                    vertical: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    prevArrow: '<div class="icon-prev"></div>',
+                    nextArrow: '<div class="icon-next"></div>',
+                    vertical: false
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    prevArrow: '<div class="icon-prev"></div>',
+                    nextArrow: '<div class="icon-next"></div>',
+                    vertical: false
+                }
+            }
+        ]
+    });
+
+    //========================= datetimepicker
     $('#tv22').datetimepicker({
         format: 'unixtime',
         formatDate: 'unixtime',
@@ -176,5 +202,16 @@ $(document).ready(function() {
     });
 
     $(".fancybox").fancybox();
+    //===================resize 
+    var id;
+    $(window).resize(function() {
+            clearTimeout(id);
+            id = setTimeout(doneResizing(), 200);
 
+        })
+        //===================== do resize
+    function doneResizing() {
+        mainmenu_pos('.icon-menu');
+        $('body').removeClass('js-menu_on');
+    }
 })

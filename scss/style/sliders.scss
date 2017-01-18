@@ -1,138 +1,155 @@
-@import "../base/vars";
-//======================= slider_wide 
-#events_slider~.lSAction {
-    margin: 0 auto;
-    max-width: 80em;
-    padding: 1.2rem;
-    position: relative;
-    height: 0px;
-    padding: 0px;
-    a {
-        color: #fff;
-        font-size: 2.4rem;
-        top: -30px;
-    }
-    .lSPrev {
-        left: auto;
-        right: 150px;
-    }
-}
-#package_slider~.lSAction {
-    position: absolute;
-    bottom: 0px;
-    left: $colGap;
-    width: 120px;
-    line-height: 30px;
-    height: 70px;
-    a {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-}
-#locations_slider, #locations_slider2
-{
-    &~.lSAction {
-        margin: 0 auto;
-        max-width: 80em;
-        padding: 1.2rem;
-        position: relative;
-        height: 0px;
-        padding: 0px;
-        a {
-            color: #fff;
-            font-size: 2.4rem;
-            top: -30px;
-        }
-        .lSNext {
-            right: auto;
-            left: 150px;
-        }
-    }
-}
-.slider_wide li {
-    height: 350px;
-    background-size: cover;
-    background-position: 50%;
-    &.col {
-        padding: 0px;
-    }
-    .block_wrap {
-        height: 100%;
-    }
-    .block_wrap>* {
-        display: block;
-        float: left;
-        clear: both;
-        color: #fff;
-    }
-    a {
-        color: #fff;
-    }
-    time {
-        background: $clr_ok;
-        font-size: 1.2rem;
-        padding: .3em .6em;
-        text-shadow: 1px 1px 2px #4e8c00;
-        &.icon-location:before {
-            font-size: 1.2em;
-            display: inline-block;
-            padding: 0 5px 0 0;
-        }
-    }
-    .h2 {
-        line-height: 1em;
-        &:after {
-            content: '';
-            margin-top: 3vw;
-            display: block;
-            width: 70px;
-            border-top: #fff 3px solid;
-        }
-    }
-    .h2, .btn {
-        margin: 2vw 0;
-    }
-    .btn {
-        border-width: 2px;
-        border-radius: 0px;
-        padding-left: 2em;
-        padding-right: 2em;
-        &:hover {
-            opacity: 1;
-            background: rgba(255, 255, 255, .3);
-        }
-    }
-    .social_box a {
-        font-size: 1.2rem;
-        display: inline-block;
-        padding: 5px;
-    }
+    @import "../base/vars";
+    //======================= slider_wide 
     .slide_num {
         font-size: 2.8rem;
         position: absolute;
         font-weight: 600;
-        right: $colGap*5;
+        right: $colGap*6;
+        color: #fff;
         bottom: 0px;
+        padding: 0 2px;
         sup {
             font-size: 1.3rem;
             top: -.8em;
-            margin-left: -5px;
+            // margin-left: -5px;
         }
     }
-}
-.slider_wide.txt_r li {
-    .block_wrap>* {
-        float: right;
+    .arr_wrap {
+        margin: 0 auto;
+        max-width: 80em;
+        position: relative;
+        height: 0px;
+        padding: 0px;
+        .slick-arrow {
+            color: #fff;
+            display: block;
+            top: 50%;
+            cursor: pointer;
+            font-size: 2.6rem;
+            position: absolute;
+            z-index: 99;
+            margin-top: -16px;
+            opacity: .5;
+            -webkit-transition: opacity .35s linear 0s;
+            transition: opacity .35s linear 0s;
+        }
     }
-    .h2:after {
-        float: right;
+    #events_slider~.arr_wrap {
+        .slick-arrow {
+            top: -32px;
+        }
     }
-    .slide_num {
-        right: auto;
-        left: 3rem;
+    #package_slider~.arr_wrap {
+        .slick-arrow {
+            top: -32px;
+        }
     }
-    .social_box {
-        left: auto;
-        right: 0px;
+    #locations_slider~.arr_wrap {
+        .slick-arrow {
+            top: -32px;
+        }
     }
-}
+    .slider_wide {
+        &~.arr_wrap {
+            .icon-next {
+                right: 15px;
+            }
+            .icon-prev {
+                right: 140px;
+            }
+            .slide_num {
+                right: $colGap*6;
+            }
+        }
+    }
+    .slider_wide .slick-slide {
+        height: 350px;
+        background-size: cover;
+        background-position: 50%;
+        &.col {
+            padding: 0px;
+        }
+        .block_wrap {
+            height: 100%;
+        }
+        .block_wrap>* {
+            display: block;
+            float: left;
+            clear: both;
+            color: #fff;
+        }
+        a {
+            color: #fff;
+        }
+        time {
+            background: $clr_ok;
+            font-size: 1.2rem;
+            padding: .3em .6em;
+            text-shadow: 1px 1px 2px #4e8c00;
+            &.icon-location:before {
+                font-size: 1.2em;
+                display: inline-block;
+                padding: 0 5px 0 0;
+            }
+        }
+        .h2 {
+            line-height: 1em;
+            &:after {
+                content: '';
+                margin-top: 3vw;
+                display: block;
+                width: 70px;
+                border-top: #fff 3px solid;
+            }
+        }
+        .h2, .btn {
+            margin: 2vw 0;
+        }
+        .btn {
+            border-width: 2px;
+            border-radius: 0px;
+            padding-left: 2em;
+            padding-right: 2em;
+            &:hover {
+                opacity: 1;
+                background: rgba(255, 255, 255, .3);
+            }
+        }
+        .social_box a {
+            font-size: 1.2rem;
+            display: inline-block;
+            padding: 5px;
+        }
+    }
+    .txt_r {
+        .slick-slide {
+            .block_wrap>* {
+                float: right;
+            }
+            .h2:after {
+                float: right;
+            }
+            .slide_num {
+                right: auto;
+                left: 3rem;
+            }
+            .social_box {
+                left: auto;
+                right: 0px;
+            }
+        }
+        &~.arr_wrap {
+            .icon-prev {
+                left: 15px;
+                right: auto;
+            }
+            .icon-next {
+                left: 140px;
+                right: auto;
+            }
+            .slide_num {
+                right: auto;
+                left: $colGap*6;
+            }
+        }
+    }
