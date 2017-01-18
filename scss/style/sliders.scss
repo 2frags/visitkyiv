@@ -49,6 +49,11 @@
             top: -32px;
         }
     }
+    #videos_slider~.arr_wrap {
+        .slick-arrow {
+            top: -32px;
+        }
+    }
     .slider_wide {
         &~.arr_wrap {
             .icon-next {
