@@ -57,6 +57,9 @@
     width: 100%;
     padding-left: $colGap;
     padding-right: $colGap;
+    &.fluid {
+        width: auto;
+    }
 }
 // @include mquery(max-width, $xl) {.l-0 {display: none;}}
 // @include mquery(max-width, $l) {.m-0 {display: none;}}

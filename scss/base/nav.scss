@@ -97,7 +97,10 @@ body:before {
     display: none;
     overflow: hidden;
     background: inherit;
-    // @include transition(max-height .3s ease-in-out);
+    // @include transition(max-height .3s ease-in-out);    
+    &.relative {
+        position: relative;
+    }
     &>li {
         display: block;
     }

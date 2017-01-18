@@ -19,14 +19,12 @@
 // .col {
 //     letter-spacing: 1px;
 // }
-
 .bg_gr {
     background: #fcfcfc;
 }
 .bg_darkgr {
     background: #f9f9f9;
 }
-
 .hdr_top {
     border-bottom: $table_brdr 1px solid;
 }
@@ -221,9 +219,9 @@ footer {
     color: #eee;
     .nav {
         background: #f1f1f1;
-        li{
+        li {
             position: relative;
-            &:after{
+            &:after {
                 content: "";
                 position: absolute;
                 top: 50%;
@@ -233,9 +231,8 @@ footer {
                 margin-top: -13px;
                 background: #b8b8b8;
             }
-            &:last-child{
-                &:after
-                {
+            &:last-child {
+                &:after {
                     display: none;
                 }
             }
@@ -245,12 +242,12 @@ footer {
             font-weight: 100;
             padding: 20px 20px;
             color: #777;
-            &:hover{
+            &:hover {
                 text-decoration: underline;
             }
         }
     }
-    .hdr.h4{
+    .hdr.h4 {
         font-size: 1.1rem;
         margin-top: 2rem;
     }
@@ -304,9 +301,8 @@ footer {
         padding-bottom: 10px;
     }
 }
-.ftr_menu
-{
-    ul{
+.ftr_menu {
+    ul {
         padding: 44px 0 0 0;
         li {
             list-style-type: none;
@@ -318,10 +314,8 @@ footer {
         }
     }
 }
-
-.footer
-{
-    &_top{
+.footer {
+    &_top {
         border-bottom: 1px solid #fff;
     }
     &_socials {
@@ -361,7 +355,7 @@ footer {
             width: 12vw;
         }
     }
-    .slider_wide li {
+    .slider_wide li, .slider_wide .slick-slide {
         height: 400px;
         .h2 {
             max-width: 60%;
@@ -375,7 +369,7 @@ footer {
     .nav a {
         padding: 0.5em 2vw;
     }
-    .slider_wide li {
+    .slider_wide li, .slider_wide .slick-slide {
         .h2, .btn {
             margin: 1.8vw 0;
         }
@@ -388,7 +382,7 @@ footer {
     .top_filters .date {
         max-width: 90%
     }
-    .slider_wide li {
+    .slider_wide li, .slider_wide .slick-slide {
         .h2, .btn {
             margin: 1.3vw 0;
         }
