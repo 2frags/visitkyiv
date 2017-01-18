@@ -5,6 +5,7 @@
 @import "style/route";
 @import "style/location";
 @import "style/profile";
+@import "style/allroutes";
 .block_wrap {
     margin: 0 auto;
     max-width: $xl;
@@ -135,8 +136,8 @@
 }
 .h2.txt_c {
     font-weight: bold;
-    padding-bottom: 50px;
-    background: url(../img/h1.png) 50% 100% no-repeat;
+    padding-bottom: 35px;
+    background: url(../img/h1.svg) 50% 100% no-repeat;
     &+.txt_c {
         color: $txt_light;
         margin: 15px 0 20px 0;

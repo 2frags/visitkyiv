@@ -1,0 +1,129 @@
+.rss-block
+{
+  padding: 0 0 20px 0;
+  a{
+    color: #474646;
+    span{
+      color: #fab900;
+      display: inline-block;
+      font-size: 28px;
+      vertical-align: initial;
+    }
+  }
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.filter{
+  &-block
+  {
+    font-size: .875rem;
+    font-weight: 400;
+    padding: 19px 0 14px 28px;
+    border-top: 1px solid #f1f1f1;
+  }
+  &-title{
+    margin: 0 0 10px 0;
+  }
+  &-form-item
+  {
+    margin: 3px 0 11px 0;
+    min-height: 20px;
+    input[type="checkbox"] + label:before, input[type="radio"] + label:before
+    {
+      width: 20px;
+      height: 20px;
+    }
+    input[type="checkbox"] + label, input[type="radio"] + label
+    {
+      padding-left: 30px;
+      padding-top: 7px;
+    }
+    input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before
+    {
+      border-color: #76b72a;
+      background: #76b72a;
+    }
+    input[type="checkbox"]:checked + label:after
+    {
+      border-right: #fff 3px solid;
+      border-bottom: #fff 3px solid;
+    }
+    input[type="checkbox"] + label:after
+    {
+      width: 6px;
+      height: 13px;
+      margin: -5px 0 0 8px;
+    }
+  }
+  &-form-count{
+    float: right;
+    font-size: 12px;
+    font-weight: 300;
+    color: #a5a5a5;
+    padding: 5px 0 0 0;
+  }
+}
+.routesblock
+{
+  .news_block {
+    &>span{
+      top: 5%;
+      margin-top: 0px;
+      font-size: .875rem;
+      padding: 0 5px;
+      &:before{
+        font-size: 1.5rem;
+        float: left;
+        border: none;
+        margin: -5px 0 -5px -5px;
+      }
+      i{
+        font-style: normal;
+        display: inline-block;
+        text-transform: none;
+        padding: 0 7px 0 8px;
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 0px;
+          height: 21px;
+          border-left: 1px solid white;
+        }
+      }
+    }
+    .news_block_info strong
+    {
+      margin: 5px 0 12px 0;
+    }
+  }
+}
+.news_block_btop
+{
+  padding: 5px 0 0 0;
+  border-top: 1px solid white;
+  text-align: left;
+  margin: 5px 0 0 0;
+}
+.news_block_mini
+{
+  position: relative;
+  min-height: 20px;
+  display: inline-block !important;
+  margin: 0 10px 10px 0;
+  padding: 0 0 0 20px!important;
+  text-align: left !important;
+  .abs_ico
+  {
+    color: white;
+  }
+}
