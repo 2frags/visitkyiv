@@ -110,7 +110,7 @@ $(document).ready(function() {
 
 
     $('#package_slider').slick({
-        autoplay: true,
+        autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         appendArrows: $("<div></div>").addClass("arr_wrap").insertAfter("#package_slider"),

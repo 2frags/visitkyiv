@@ -31,5 +31,23 @@ $hdr_btn_size: 35px;
     color: $txt_light;
     @include rounded(30px);
 }
+.sign-search
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-left: 30px;
+    &:before{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 19px;
+        height: 19px;
+        background: url(../img/search.png) no-repeat center;
+        background-size: cover;
+        content: "";
+    }
+
+}
 //------------------- queries
 @include mquery(min-width, $s) {}

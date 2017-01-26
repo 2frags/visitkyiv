@@ -123,13 +123,150 @@ body:before {
     margin: 0px;
     padding: 0px;
     vertical-align: middle;
-    a {
-        display: block;
-        text-decoration: none;
-        padding: $fld_padd_h $fld_padd_v;
-    }
+
     &>li {
         display: inline-block;
+        position: relative;
+        &>a {
+            display: block;
+            text-decoration: none;
+            padding: 8px 10px;
+            padding: 13px 2.4rem;
+        }
+        &>ul{
+            display: none;
+            border: 1px solid #c3c2c2;
+            border-radius: 2px;
+            background: #f2f2f2;
+            position: absolute;
+            list-style-type: none;
+            top: 100%;
+            left: 0px;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            &>li{
+                display: block;
+                position: relative;
+                border-bottom: 1px solid transparent;
+                text-align: left;
+                padding: 0 10px;
+                &:hover{
+                    border-bottom: 1px solid #cccccc;
+                    background: #fefefe;
+                    &:before{
+                        width: 3px;
+                        background: #0097d7;
+                        height: 100%;
+                        top: 0px;
+                        right: 0px;
+                        content: "";
+                        position: absolute;
+                    }
+                    &>a{
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+                &>a{
+                    display: block;
+                    background: transparent;
+                    font-size: 10px;
+                    padding: 10px 10px;
+                    color: #474646;
+                    border-bottom: 1px solid #cccccc;
+                }
+                &:last-child{
+                    border-bottom: none;
+                    &:hover{
+                        border-bottom: none;
+                    }
+                    &>a{
+                        border-bottom: none;
+                    }
+                }
+                &.hassubmenu
+                {
+                    &:after{
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 4px 0 4px 5px;
+                        border-color: transparent transparent transparent #474646;
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        margin-top: -5px;
+                    }
+                }
+                &>ul{
+                    display: none;
+                    border: 1px solid #c3c2c2;
+                    border-radius: 2px;
+                    background: #f2f2f2;
+                    position: absolute;
+                    list-style-type: none;
+                    margin: 0px;
+                    padding: 0px;
+                    top: 0px;
+                    left: 100%;
+                    min-width: 150px;
+                    &>li {
+                        display: block;
+                        position: relative;
+                        border-bottom: 1px solid transparent;
+                        text-align: left;
+                        padding: 0 10px;
+                        &:hover {
+                            border-bottom: 1px solid #cccccc;
+                            background: #fefefe;
+                            &:before {
+                                width: 3px;
+                                background: #e74e0f;
+                                height: 100%;
+                                top: 0px;
+                                right: 0px;
+                                content: "";
+                                position: absolute;
+                            }
+                            & > a {
+                                border-bottom: 1px solid transparent;
+                            }
+                        }
+                        & > a {
+                            display: block;
+                            background: transparent;
+                            font-size: 10px;
+                            padding: 10px 10px;
+                            color: #474646;
+                            border-bottom: 1px solid #cccccc;
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                            &:hover {
+                                border-bottom: none;
+                            }
+                            & > a {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+       &:hover{
+           &>ul{
+               display: block;
+               &>li{
+                   &:hover{
+                       ul{
+                           display: block;
+                       }
+                   }
+               }
+           }
+       }
     }
 }
 .navbar a {
