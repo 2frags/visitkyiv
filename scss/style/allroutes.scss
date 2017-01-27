@@ -127,3 +127,23 @@
     color: white;
   }
 }
+
+.slider_wide3_wrapper{
+  position: relative;
+  .arr_wrap
+  {
+    position: static;
+    .slick-arrow
+    {
+      color: #808080;
+      top: 50% !important;
+      margin-top: -22px;
+      &.icon-prev{
+        left: -50px;
+      }
+      &.icon-next{
+        right: -50px;
+      }
+    }
+  }
+}
