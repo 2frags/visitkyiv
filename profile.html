@@ -95,7 +95,7 @@
                                         <div class="col xx-12 li js-panel" data-target="#my_card">
                                             <img src="img/icon_profile_card.svg" alt=""> Моя електрона картка
                                         </div>
-                                        <div class="col xx-12 li js-panel" data-target="#my_data">
+                                        <div class="col xx-12 li js-panel" data-target="#my_route">
                                             <img src="img/icon_profile_routes.svg" alt=""> Мої маршрути
                                         </div>
                                         <div class="col xx-12 li js-panel" data-target="#my_data">
@@ -112,22 +112,18 @@
                         <div class="profile_tabs js-panels">
                             <div id="my_data" class="on">
                                 <div class="my_data_top">
-                                    <div><strong>Анатолій Рубенштейн</strong></div>
+                                  <div class="profile_tabs_wrp">  <div><strong>Анатолій Рубенштейн</strong></div>
                                     <div>qwerty12345@gmail.com <span class="icon-check"></span></div>
-                                    <div class=" disabled">visitkyiv ID: 123151111</div>
+                                    <div class=" disabled">visitkyiv ID: 123151111</div></div>
                                 </div>
                                 <div class="hr"></div>
                                 <form action="" class="form">
-                                    <div class="grid">
+                                    <div class="profile_tabs_wrp"><div class="grid">
                                         <label class="col xs-5">Iм'я</label>
                                         <div class="col xs-7">
                                             <input type="text">
                                         </div>
-                                        <label class="col xs-5">Фамiлiя</label>
-                                        <div class="col xs-7">
-                                            <input type="text">
-                                        </div>
-                                        <label class="col xs-5">Фамiлiя</label>
+                                        <label class="col xs-5">Прізвище</label>
                                         <div class="col xs-7">
                                             <input type="text">
                                         </div>
@@ -139,23 +135,23 @@
                                         <div class="col xs-7 js-showpass">
                                             <input type="password">
                                         </div>
-                                        <label class="col xs-5">Стать</label>
-                                        <div class="col fluid">
-                                            <input type="radio" name="sex" id="sex_m">
-                                            <label for="sex_m">Чол.</label>
-                                        </div>
-                                        <div class="col xx-4 xs-3">
-                                            <input type="radio" name="sex" id="sex_f">
-                                            <label for="sex_f">Жiн.</label>
+                                        <label class="col xs-5" for="sex">Стать</label>
+                                        <div class="col xs-7">
+                                            <div class="s-5 l-3"><select name="" id="sex">
+                                                <option value="">Чол</option>
+                                                <option value="">Жін</option>
+                                            </select></div>
                                         </div>
 
-                                        <label class="col xs-5">Вiк</label>
+                                        <label class="col xs-5" for="age">Вiк</label>
                                         <div class="col xs-7">
-                                            <select name="" id="">
-                                                <option value="">18</option>
-                                                <option value="">19</option>
-                                                <option value="">20</option>
-                                            </select>
+                                            <div class="s-5 l-3">
+                                                <select name="" id="age">
+                                                    <option value="">18</option>
+                                                    <option value="">19</option>
+                                                    <option value="">20</option>
+                                                </select>
+                                            </div>
                                         </div>
                                         <label class="col xs-5">Країна реєстрацiї</label>
                                         <div class="col xs-7">
@@ -182,9 +178,9 @@
                                             </select>
                                         </div>
                                         <div class="col xs-gap-5 xs-7">
-                                            <div class="btn">ЗБЕРЕГТИ</div>
+                                            <div class="btn btn_full">ЗБЕРЕГТИ</div>
                                         </div>
-                                    </div>
+                                    </div></div>
                                 </form>
                             </div>
 
@@ -272,6 +268,77 @@
                             </div>
                             <!--my_card-->
 
+                            <div id="my_route">
+                                <div class="hdr h6 txt_c"><strong>МОЇ МАРШРУТИ</strong> </div>
+                                <div class="hr"></div>
+                                <div class="route_block">
+                                    <div class="grid">
+                                        <div class="col l-8 xx-12">
+                                            <div class="route_block_title">Чарівний поділ</div>
+                                        </div>
+                                        <div class="col l-2 xx-4  route_block_icon">
+                                            <span class="icon-walk"></span>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 км</div>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 год</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="route_block">
+                                    <div class="grid">
+                                        <div class="col l-8 xx-12">
+                                            <div class="route_block_title">Чарівний поділ</div>
+                                        </div>
+                                        <div class="col l-2 xx-4  route_block_icon">
+                                            <span class="icon-walk"></span>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 км</div>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 год</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="route_block">
+                                    <div class="grid">
+                                        <div class="col l-8 xx-12">
+                                            <div class="route_block_title">Чарівний поділ</div>
+                                        </div>
+                                        <div class="col l-2 xx-4  route_block_icon">
+                                            <span class="icon-icon_car"></span>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 км</div>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 год</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="route_block">
+                                    <div class="grid">
+                                        <div class="col l-8 xx-12">
+                                            <div class="route_block_title">Чарівний поділ</div>
+                                        </div>
+                                        <div class="col l-2 xx-4  route_block_icon">
+                                            <span class="icon-icon_car"></span>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 км</div>
+                                        </div>
+                                        <div class="col l-1 xx-4 route_block_info">
+                                            <div class="txt_c">8 год</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--my_card-->
+
+
                         </div>
 
                     </div>
@@ -282,10 +349,34 @@
                         </div>
                         <div class="profile_ads grid">
                             <div id="offers_slider">
-                                <div>
+                                <div class="blue_bg">
+                                    <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class=" news_bg">-20<sup>%</sup></span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
+                                </div>
+                                <div  class="green_bg">
                                     <div class="news_block " style="background-image: url(tmp/2.jpg)">
                                         <a href="#"></a>
-                                        <span class="icon-location news_bg">test</span>
+                                        <span class="news_bg">-40<sup>%</sup></span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
+                                </div>
+                                <div  class="red_bg">
+                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class="news_bg">-20<sup>%</sup></span>
+                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
+                                    </div>
+                                    <!--news_block-->
+                                </div>
+                                <div   class="blue_bg">
+                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
+                                        <a href="#"></a>
+                                        <span class="news_bg">-20<sup>%</sup></span>
                                         <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
                                     </div>
                                     <!--news_block-->
@@ -293,31 +384,7 @@
                                 <div>
                                     <div class="news_block " style="background-image: url(tmp/2.jpg)">
                                         <a href="#"></a>
-                                        <span class="icon-location news_bg">test</span>
-                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
-                                    </div>
-                                    <!--news_block-->
-                                </div>
-                                <div>
-                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
-                                        <a href="#"></a>
-                                        <span class="icon-location news_bg">test</span>
-                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
-                                    </div>
-                                    <!--news_block-->
-                                </div>
-                                <div>
-                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
-                                        <a href="#"></a>
-                                        <span class="icon-location news_bg">test</span>
-                                        <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
-                                    </div>
-                                    <!--news_block-->
-                                </div>
-                                <div>
-                                    <div class="news_block " style="background-image: url(tmp/2.jpg)">
-                                        <a href="#"></a>
-                                        <span class="icon-location news_bg">test</span>
+                                        <span class="news_bg">-20<sup>%</sup></span>
                                         <strong>Посольства 38 країн запрошують на благодійний ярмарок</strong>
                                     </div>
                                     <!--news_block-->

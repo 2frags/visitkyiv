@@ -1,25 +1,46 @@
-<div class="login_form">
+<div class="login_form popup_form">
     <form method="post" action="" name="loginform" id="loginform">
-        <h1>ВХІД</h1>
-        <div class="row form-group">
-            <div class="col-xs-12">
-                <input class="form-control" type="text" id="email" name="email" value="" placeholder="Ваш e-mail">
+        <h1>Реєстрація</h1>
+        <div class="popup_form_wrp">
+            <div class="form-group">
+                <input class="form-control" type="text" id="vname" name="vname" value="" placeholder="Ваше ім'я*">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="email" name="email" value="" placeholder="Ваш e-mail*">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль*">
+                <span class="txt_r form_popup_sm">Не менше 6 символів</span>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" id="password2" name="password2"
+                       placeholder="Повторіть пароль*">
+
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="checkbox" id="rules" name="rules">
+                <label for="rules" class="nexttolabel">
+                    <i>Реєструючи новий профіль, Я приймаю умови <a href="">угоди користувача</a></i>
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn_full" type="submit" name="action" value="login">Створити профіль
+                </button>
             </div>
         </div>
-        <div class="row form-group">
-            <div class="col-xs-12">
-                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль">
-            </div>
-        </div>
-        <div class="row form-group">
-            <div class="col-xs-12 text-right">
-                <button class="btn btn-success" type="submit" name="action" value="login">Вхiд</button>
-            </div>
+        <div class="popup_form_small">
+            На Ваш E-mail було відправлено лист для підтвердження введених даних
         </div>
         <hr>
-        <div class="text-center">
-            <a href="/account/forgot" data-fancybox-type="ajax" class="fancybox ajax btn btn-link btn-xs">Нагадати пароль</a>
-            <a href="/account/register" data-fancybox-type="ajax" class="fancybox ajax btn btn-link btn-xs">Не зареестрованi?</a>
+        <div class="txt_c popup_form_bottom">
+            <div class="popup_form_title">
+                Або зареєструйтесь через соцмережі
+            </div>
+            <div class="popup_form_socials">
+                <a href="#" class="icon-facebook"></a>
+                <a href="#" class="icon-linkedin"></a>
+                <a href="#" class="icon-google"></a>
+            </div>
         </div>
     </form>
 </div>

@@ -143,6 +143,33 @@
         @include gr_vr;
     }
 }
+.green_bg{
+    .news_block
+    {
+        border-bottom-color: $clr_ok !important;
+        .news_bg{
+            background-color: rgba( $clr_ok, .9) !important;
+        }
+    }
+}
+.red_bg{
+    .news_block
+    {
+        border-bottom-color: $clr_err !important;
+        .news_bg{
+            background-color: rgba( $clr_err, .9) !important;
+        }
+    }
+}
+.blue_bg{
+    .news_block
+    {
+        border-bottom-color: $active !important;
+        .news_bg{
+            background-color: rgba( $active, .9) !important;
+        }
+    }
+}
 .read_more {
     color: $txt_mid;
     vertical-align: middle;

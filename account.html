@@ -1,25 +1,33 @@
-<div class="login_form">
-    <form method="post" action="" name="loginform" id="loginform">
+<div class="login_form popup_form">
+    <form method="post" action="" name="loginform" id="loginform2">
         <h1>ВХІД</h1>
-        <div class="row form-group">
-            <div class="col-xs-12">
-                <input class="form-control" type="text" id="email" name="email" value="" placeholder="Ваш e-mail">
+        <div class="popup_form_wrp">
+            <div class="form-group">
+                <input class="form-control" type="text" id="email" name="email" value="" placeholder="Ваш e-mail*">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль*">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn_full" type="submit" name="action" value="login">Увійти
+                </button>
+            </div>
+            <div class="form-group">
+                <div class="form-group-inside"><a href="#" class="link-small">Забули пароль?</a></div>
+                <a href="#" class="link-small">Створити новий профіль</a>
             </div>
         </div>
-        <div class="row form-group">
-            <div class="col-xs-12">
-                <input class="form-control" type="password" id="password" name="password" placeholder="Ваш пароль">
-            </div>
-        </div>
-        <div class="row form-group">
-            <div class="col-xs-12 text-right">
-                <button class="btn btn-success" type="submit" name="action" value="login">Вхiд</button>
-            </div>
-        </div>
+
         <hr>
-        <div class="text-center">
-            <a href="/account/forgot" data-fancybox-type="ajax" class="fancybox ajax btn btn-link btn-xs">Нагадати пароль</a>
-            <a href="/account/register" data-fancybox-type="ajax" class="fancybox ajax btn btn-link btn-xs">Не зареестрованi?</a>
+        <div class="txt_c popup_form_bottom">
+            <div class="popup_form_title">
+                Або увійдіть через соцмережі
+            </div>
+            <div class="popup_form_socials">
+                <a href="#" class="icon-facebook"></a>
+                <a href="#" class="icon-linkedin"></a>
+                <a href="#" class="icon-google"></a>
+            </div>
         </div>
     </form>
 </div>
