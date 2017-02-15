@@ -29,7 +29,7 @@
     background: #f9f9f9;
 }
 .hdr_top {
-    border-bottom: $table_brdr 1px solid;
+    border-bottom: $lightgrey 1px solid;
 }
 .page_hdr {
     a {
@@ -52,7 +52,7 @@
     }
 }
 .page_hdr {
-    border-bottom: $table_brdr 1px solid;
+    border-bottom: $lightgrey 1px solid;
 }
 .top_info {
     small {
@@ -125,10 +125,52 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity .2s ease-in-out;
+        z-index: 10;
+        a{
+            line-height: 16px;
+            display: block;
+            padding: 2px 5px;
+            &:hover{
+                background: $clr_dark;
+                color: white;
+            }
+        }
+    }
+}
+.__opened
+{
+    .other_langs{
+        opacity: 1;
+        visibility: visible;
     }
 }
 .login, .lang {
-    font-size: .9rem;
+    a{
+        font-size: 12px;
+    }
+
+}
+.login_block
+{
+    padding-right: 15px;
+    margin: 0 0 6px 0;
+    &_name{
+        font-size: 12px;
+        display: inline-block;
+        margin: 0 14px 0 0;
+        vertical-align: middle;
+        &_fl
+        {
+            background: #0097d7;
+            color: white;
+            padding: 2px 7px;
+            font-size: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            font-weight: 500;
+        }
+    }
 }
 //======================== headers
 .h1, .h2, .h3 {

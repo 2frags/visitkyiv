@@ -169,11 +169,11 @@ ul.location-info-list
     font-size: 14px;
     height: auto;
     &>span{
-      font-size: 24px;
+      font-size: 22px;
       display: inline-block;
       vertical-align: middle;
-      width: 30px;
-      text-align: left;
+      width: 38px;
+      text-align: center;
     }
   }
 }
@@ -186,4 +186,10 @@ ul.location-info-list
     left: 0px;
   }
 }
-
+.hdr.h6
+{
+  em{
+    display: inline-block;
+    margin: 0 10px 0  0;
+  }
+}

@@ -49,5 +49,36 @@ $hdr_btn_size: 35px;
     }
 
 }
+.top_search_block
+{
+    position: absolute !important;
+    right: 30px;
+    top: 5px;
+}
+.btn.brdr.icon-menu
+{
+   margin: 5px 5px 0 0;
+}
+.lang_block
+{
+    position: relative;
+    .lang_current
+    {
+        font-size: 12px;
+        padding-right: 15px;
+        cursor: pointer;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: 3px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 3px 0 3px;
+            border-color: #474646 transparent transparent transparent;
+        }
+    }
+}
 //------------------- queries
 @include mquery(min-width, $s) {}

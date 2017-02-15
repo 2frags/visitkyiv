@@ -42,6 +42,25 @@
   &_right{
     .loc_block_info{
       margin: 0 0 17px 0;
+      &.__mrg-bottom20
+      {
+        margin-bottom: 35px;
+      }
+    }
+    .loc_block_info_price
+    {
+      color: $active;
+      strong{
+        font-size: 30px;
+      }
+      sub{
+        bottom: 0px;
+        font-size: 13px;
+      }
+      sup{
+        top: -1rem;
+        font-size: 13px;
+      }
     }
     .loc_block_info_desc
     {
@@ -55,6 +74,14 @@
       {
         font-weight: 300;
         color: #808080;
+      }
+      a.btn
+      {
+        border-radius: 0px;
+        color: white;
+        float: right;
+        padding-right: 26px;
+        padding-left: 26px;
       }
     }
     .ico-image
@@ -144,5 +171,36 @@
     font-weight: 300;
     font-size:.875rem;
     width: 82%;
+  }
+}
+@include mquery(max-width, $s) {
+ .location-info-list
+ {
+   display: none !important;
+ }
+}
+.afisha_org
+{
+  &_header{
+    margin-bottom: 20px;
+    color: #808080;
+    font-size: 12px;
+    a{
+      color: #808080;
+    }
+    strong{
+        color: #464646;
+    }
+  }
+  &_desc{
+    color: #808080;
+  }
+  &_btn{
+    margin-top: 30px;
+    .btn{
+      border-radius: 0px;
+      font-size: 1.1rem;
+      padding: 10px 40px;
+    }
   }
 }

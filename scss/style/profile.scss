@@ -108,11 +108,16 @@ $side_panel_bg: #474646;
   margin: -$colGap;
   margin-top: $colGap;
   padding: $colGap;
+  overflow: auto;
   a {
     text-decoration: underline;
     color: #333;
     font-weight: 400;
   }
+}
+.grid_wrapper
+{
+  padding: 0.6rem;
 }
 .btn_full{
   width: 100%;
@@ -375,4 +380,40 @@ $side_panel_bg: #474646;
 .form-group-inside
 {
   margin-bottom: 7px;
+}
+.__absolute
+{
+  position: absolute;
+}
+.__relative
+{
+  position: relative;
+}
+.what_card
+{
+  right: 0px;
+}
+.upload_block
+{
+  &_span
+  {
+    color: $clr_black;
+    text-decoration: underline;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  #upload_block_form
+  {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+  }
+}
+.__text-underline
+{
+  text-decoration: underline;
+}
+.card_information
+{
+  min-height: 200px;
 }

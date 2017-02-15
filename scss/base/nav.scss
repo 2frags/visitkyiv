@@ -130,8 +130,10 @@ body:before {
         &>a {
             display: block;
             text-decoration: none;
-            padding: 8px 10px;
             padding: 13px 2.4rem;
+            @include mquery(max-width, $xl) {
+                padding: 13px 0.5rem;
+            }
         }
         &>ul{
             display: none;

@@ -30,4 +30,7 @@ $(document).ready(function() {
             return false;
         });
     }
+    $('.lang_current').click(function() {
+        $(this).closest('.lang_block').toggleClass('__opened');
+    });
 })
