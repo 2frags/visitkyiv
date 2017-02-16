@@ -99,6 +99,10 @@
             display: block;
             text-align: justify;
             font-size: .9rem;
+            &.text_nj
+            {
+                text-align: left;
+            }
         }
         em {
             position: absolute;
@@ -167,6 +171,16 @@
         border-bottom-color: $active !important;
         .news_bg{
             background-color: rgba( $active, .9) !important;
+        }
+    }
+}
+
+.lemon_bg{
+    .news_block
+    {
+        border-bottom-color: $clr_lemon !important;
+        .news_bg{
+            background-color: rgba( $clr_lemon, .9) !important;
         }
     }
 }

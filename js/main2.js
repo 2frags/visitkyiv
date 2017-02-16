@@ -30,6 +30,39 @@ $(document).ready(function() {
             return false;
         });
     }
+
+    //Show more filters
+        $('.left_afisha .filter-form').each(function() {
+            var allftlr = $(this).find('.filter-form-item');
+            var allftlrcount = allftlr.length;
+            var y=5;
+            allftlr.hide();
+            allftlr.slice(1,y).show();
+            var hiddenelements = allftlrcount-y;
+            if(hiddenelements>0){
+                $(this).find('.filter-form-item-more').show();
+                $(this).find('.filter-form-item-more .count_of_fltr').text('('+hiddenelements+')');
+            }
+        });
+        $(document).on("click", '.filter-form-item-more-link:not(.__less)', function(e) {
+            var allftlr = $(this).closest('.filter-form').find('.filter-form-item');
+            allftlr.show();
+            $(this).addClass('__less');
+            $(this).find('.count_of_fltr_txt').text('Менше');
+            $(this).find('.count_of_fltr').hide();
+            return false;
+        });
+        $(document).on("click", '.filter-form-item-more-link.__less', function(e) {
+            var y=5;
+            var allftlr = $(this).closest('.filter-form').find('.filter-form-item');
+            allftlr.slice(y,100).hide();
+            $(this).removeClass('__less');
+            $(this).find('.count_of_fltr_txt').text('Більше');
+            $(this).find('.count_of_fltr').show();
+            return false;
+        });
+
+
     $('.lang_current').click(function() {
         $(this).closest('.lang_block').toggleClass('__opened');
     });
