@@ -303,8 +303,13 @@
     }
 }
 
-
-.slider_wide3 {
+.allcsp
+{
+    .col{
+        margin-bottom: 20px;
+    }
+}
+.slider_wide3, .allcsp {
     .col{
         height: 240px;
     }
@@ -366,7 +371,7 @@
                 left: 70%;
                 opacity: 1;
                 .h1 {
-                    font-weight: 600;
+                    font-weight: 500;
                 }
                 sup {
                     font-size: 1rem;
@@ -419,6 +424,31 @@
                 }
             }
         }
+    }
+}
+.csp_big_price
+{
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 1;
+}
+.news_block_info_csp_price
+{
+    max-width: 120px;
+    margin: 20px auto;
+}
+.csp_price_2
+{
+    font-size: 2.4rem;
+    font-weight: 500;
+    float: right;
+    position: absolute;
+    bottom: 2.8rem;
+    right: 20px;
+    sup{
+        font-weight: 400;
+        font-size: 1.1rem;
+        top: -1rem;
     }
 }
 .rss-block {

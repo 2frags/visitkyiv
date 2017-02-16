@@ -37,7 +37,7 @@ $(document).ready(function() {
             var allftlrcount = allftlr.length;
             var y=5;
             allftlr.hide();
-            allftlr.slice(1,y).show();
+            allftlr.slice(0,y).show();
             var hiddenelements = allftlrcount-y;
             if(hiddenelements>0){
                 $(this).find('.filter-form-item-more').show();
