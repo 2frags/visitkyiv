@@ -173,6 +173,15 @@
             background-color: rgba( $active, .9) !important;
         }
     }
+    &.green_scroll{
+        .news_block:hover
+        {
+            border-bottom-color: $clr_ok !important;
+            .news_bg{
+                background-color: rgba( $clr_ok, .9) !important;
+            }
+        }
+    }
 }
 
 .lemon_bg{
@@ -428,4 +437,35 @@ a.grey-link{
 {
     font-size: 12px;
     color: #a5a5a5;
+}
+.news_block{
+    &_underlink
+    {
+        text-align: left;
+        position: absolute;
+        padding: 10px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        font-weight: 500;
+        font-size: 1.2rem;
+        i{
+            font-weight: 400;
+            font-size: .85rem;
+            display: block;
+            margin: 5px 0 0 0;
+        }
+    }
+}
+.news_text_app
+{
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: left;
+    i{
+        font-weight: 400;
+        font-size: .85rem;
+        display: block;
+        margin: 5px 0 0 0;
+    }
 }
