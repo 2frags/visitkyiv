@@ -1,0 +1,160 @@
+$kcpheight: 400px;
+.kcp-block
+{
+  &_wrapper{
+    min-height: $kcpheight;
+    margin-bottom: 21px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .block_wrap
+    {
+      min-height: $kcpheight;
+      padding: 0px;
+      .__table{
+        min-height: $kcpheight;
+      }
+      .social_box
+      {
+        bottom: 17px;
+        position: absolute;
+        left: 1.2rem;
+        a{
+          color: white;
+          display: inline-block;
+          margin-right: 6px;
+        }
+        @include mquery(max-width, $m) {
+          position: static;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  &_left
+  {
+    width: 60%;
+    padding-left: 1.2rem;
+  }
+  &_right{
+    width: 40%;
+    background-color: rgba( $active, .9) !important;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    &_wrapper
+    {
+      padding: 30px 40px;
+      @include mquery(max-width, $m) {
+        padding: 10px 10px;
+      }
+    }
+    &_top
+    {
+      font-size: 24px;
+      padding: 0 1.2rem 24px 1.2rem;
+      border-bottom: 1px solid rgba(255,255,255, .6);
+    }
+    &_middle {
+      padding: 1.2rem;
+      font-size: 18px;
+      text-shadow: none;
+    }
+    .afisha_org_btn
+    {
+      margin: 0px;
+    }
+    .btn
+    {
+      text-shadow: none;
+      box-shadow: 1px 1px 1px rgba(0,0,0,1);
+    }
+    &_bottom
+    {
+      border-top: 1px solid rgba(255,255,255, .7);
+      padding: 15px 1.2rem;
+      color: white;
+      text-shadow: none;
+      opacity: .9;
+      margin: 20px 0 0 0;
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      a{
+        color: white;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      [class^="icon-"]
+      {
+        margin-right: 5px;
+        font-size: 18px;
+      }
+    }
+    &_submiddle
+    {
+      padding: 0 1.2rem 7px 1.2rem;
+    }
+  }
+  &_price
+  {
+    font-size: 44px;
+  }
+  &_rprice
+  {
+    position: relative;
+    sup{
+      top: -30px;
+    }
+    strong{
+      font-size: 44px;
+      small{
+        font-size:9px;
+        display: block;
+        font-weight: normal;
+      }
+    }
+    &_valuta
+    {
+      position: absolute;
+      top: 18px;
+      font-size: 24px;
+      left: 100%;
+    }
+  }
+  &_rabat{
+    text-align: right;
+    span{
+      font-size: 12px;
+    }
+    strong{
+      display: block;
+      font-size: 36px;
+    }
+  }
+}
+
+.__table{
+  width: 100%;
+  height: 100%;
+  display: table;
+  @include mquery(max-width, $m) {
+    display: block;
+  }
+  .__td{
+    vertical-align: middle;
+    display: table-cell;
+    @include mquery(max-width, $m) {
+      display: block;
+      width: 100%;
+    }
+  }
+  h1{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    @include mquery(max-width, $m) {
+     padding: 40px 0;
+    }
+  }
+}
