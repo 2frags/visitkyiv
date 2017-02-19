@@ -304,6 +304,9 @@ $side_panel_bg: #474646;
   }
   &_wrp{
     padding: 1.7rem .9rem 0px .9rem;
+    @include mquery(max-width, $s) {
+      padding: 0.7rem 0 0px 0;
+    }
   }
   .form-group
   {
@@ -320,6 +323,9 @@ $side_panel_bg: #474646;
   .form-control{
     background: #fff;
     padding: 8px 17px;
+    @include mquery(max-width, $s) {
+      padding: 4px 17px;
+    }
   }
   input[type="checkbox"] + label i
   {
@@ -342,6 +348,9 @@ $side_panel_bg: #474646;
     font-size: .9rem;
     line-height: 1;
     margin: 16px 0 16px 0;
+    @include mquery(max-width, $s) {
+      margin: 8px 0;
+    }
   }
   &_socials{
     a{
@@ -384,6 +393,12 @@ $side_panel_bg: #474646;
 .__absolute
 {
   position: absolute;
+  @include mquery(max-width, $m) {
+    position: static;
+    display: block;
+    text-align: center;
+    float: none;
+  }
 }
 .__relative
 {

@@ -82,6 +82,11 @@
         float: right;
         padding-right: 26px;
         padding-left: 26px;
+        @include mquery(max-width, $s) {
+         float: none;
+          display: block;
+          margin: 10px 0 0 0;
+        }
       }
     }
     .ico-image

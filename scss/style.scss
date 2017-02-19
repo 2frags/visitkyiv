@@ -63,6 +63,9 @@
     .icon-phone2 {
         color: $active;
         font-weight: bold;
+        @include mquery(max-width, $m) {
+            font-size: 13px;
+        }
         &:before {
             padding: 5px;
             font-size: 13px;
@@ -354,6 +357,9 @@ footer {
                 width: 2px;
                 margin-top: -13px;
                 background: #b8b8b8;
+                @include mquery(max-width, $s) {
+                   display: none;
+                }
             }
             &:last-child {
                 &:after {
@@ -366,6 +372,9 @@ footer {
             font-weight: 100;
             padding: 20px 20px;
             color: #777;
+            @include mquery(max-width, $s) {
+               padding: 10px;
+            }
             &:hover {
                 text-decoration: underline;
             }
@@ -428,6 +437,9 @@ footer {
 .ftr_menu {
     ul {
         padding: 44px 0 0 0;
+        @include mquery(max-width, $m) {
+            padding: 6px 0 0 0;
+        }
         li {
             list-style-type: none;
             a {

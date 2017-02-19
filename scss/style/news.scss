@@ -47,6 +47,9 @@
         line-height: 2rem;
         text-transform: uppercase;
         font-weight: 100;
+        @include mquery(max-width, $m) {
+            top: 20%;
+        }
         &:before {
             float: right;
             font-size: 2rem;
@@ -94,6 +97,9 @@
         strong {
             margin: 2vw $colGap;
             display: block;
+            @include mquery(max-width, $m) {
+                display: none;
+            }
         }
         span {
             display: block;
@@ -339,6 +345,9 @@
         strong {
             font-size: 1.6rem;
             line-height: 1em;
+            @include mquery(max-width, $s) {
+                display: none;
+            }
             .h1 {
                 position: absolute;
                 right: 0px;
@@ -356,12 +365,18 @@
             width: auto;
             right: 30%;
             @include transform(translate(0, 50%));
+            @include mquery(max-width, $m) {
+                right: 50%;
+            }
         }
         .news_block_info {
             width: 60%;
             .time, .date {
                 position: absolute;
                 bottom: 3.2rem;
+                @include mquery(max-width, $m) {
+                    position: static;
+                }
             }
             .time {
                 right: $colGap;
@@ -370,6 +385,10 @@
                 width: 30%;
                 left: 70%;
                 opacity: 1;
+                @include mquery(max-width, $m) {
+                    width: 45%;
+                    left: 55%;
+                }
                 .h1 {
                     font-weight: 500;
                 }
@@ -410,6 +429,9 @@
                     padding-right: 90px;
                     position: relative;
                     margin: 12px 0.6rem;
+                    @include mquery(max-width, $m) {
+                        display: none;
+                    }
                 }
                 strong, span {
                     margin-left: 0px;
@@ -457,6 +479,10 @@
         float: right;
         display: inline-block;
         margin-top: -6px;
+        @include mquery(max-width, $s) {
+            float: none;
+            margin: 0px;
+        }
     }
 }
 a.grey-link{

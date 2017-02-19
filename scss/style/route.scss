@@ -8,6 +8,11 @@
       vertical-align: middle;
       position: absolute;
       margin-left: 15px;
+      @include mquery(max-width, $m) {
+        display: block;
+        position: static;
+        margin: 10px auto;
+      }
     }
   }
 }
@@ -142,6 +147,17 @@
 {
   color: #808080;
   font-size: 0.875rem;
+  @include mquery(max-width, $m) {
+    .col{
+      width: 49% !important;
+      text-align: center;
+      margin-bottom: 10px;
+      &:last-child{
+        width: 100% !important;
+        text-align: center;
+      }
+    }
+  }
   &_item{
     padding: 0 20px;
     position: relative;
@@ -154,6 +170,10 @@
     }
     &.info-nav_extended
     {
+      @include mquery(max-width, $m) {
+        text-align: left;
+        display: inline-block;
+      }
       .info-nav_ico{
         position: absolute;
       }
