@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <title>Сторінка новини</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="grid js-main_wrap">
+    <div class="col1 js_inner_wrap">
+        <div class="page_hdr">
+            <header>
+                <div class="hdr_top grid v_middl">
+                    <div class="col xx-5 s-4 m-3">
+                        <div class="top_info">
+                            <span>Tourist info</span><br>
+                            <span class="icon-phone2">+38 (044) 339 96 40</span>
+                        </div>
+                    </div>
+                    <div class="col xx-4 m-6">
+                        <a href="#" class="logo"></a>
+                    </div>
+                    <div class="col xx-3 s-4 m-3">
+                        <div class="login txt_r login_block">
+                            <a href="account.html" data-fancybox-type="ajax" class="fancybox ajax">ВХІД</a> | <a
+                                href="register.html" data-fancybox-type="ajax" class="fancybox ajax">РЕЄСТРАЦІЯ</a>
+                        </div>
+                        <div class="lang fl_r lang_block">
+                            <span class="lang_current" id="curr_lang">UA</span>
+                            <div class="other_langs">
+                                <a href="#">EN</a>
+                                <a href="#">RU</a>
+                                <a href="#">DE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--hdr_top-->
+                <div class="grid navbar clr_white">
+                    <div class="col xx-10 m-12 txt_c">
+                        <ul class="nav" id="mainmenu">
+                            <li>
+                                <a href="#">АФІША</a>
+                                <ul>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розваги</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Пам’ятки</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розміщення</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Гастрономія</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">ВІДПОЧИНОК </a>
+                                <ul>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розваги</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Пам’ятки</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розміщення</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Гастрономія</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">KYIV CITY PACKAGE</a>
+                                <ul>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розваги</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Пам’ятки</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розміщення</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Гастрономія</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">МАРШРУТИ</a>
+                                <ul>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розваги</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Пам’ятки</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Розміщення</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubmenu">
+                                        <a href="#">Гастрономія</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Фестивалі</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Ярмарки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Концерти</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Театри</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Виставки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">ІНФОРМАЦІЯ</a>
+                            </li>
+                            <li class="top_search_block">
+                                <div class="top_search  sign-search">
+                                    <form action="">
+                                        <input type="text" placeholder="Пошук..." class="fld clr_none">
+                                        <input type="submit" class="btn clr_none">
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col xx-2 m0 txt_r">
+                        <div class="btn brdr icon-menu" data-target="#mainmenu"></div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!--page_hdr-->
+        <div class="block_wrap">
+            <article class="article">
+                <h1 class="h2 txt_c">Незрівнянний яхтинг
+                    на хвилях Дніпра</h1>
+                <div class="newspage-top clearfix">
+                    <div class="fl_l">
+                        14 листопада 2016 р.б 15:30
+                    </div>
+                    <div class="fl_r txt_r">
+                        <span class="icon-share"></span>
+                        <span>ПОДІЛИТИСЬ</span>
+                        <a class="icon-facebook" href="" tabindex="0"></a>
+                        <a class="icon-twitter" href="" tabindex="0"></a>
+                        <a class="icon-vk" href="" tabindex="0"></a>
+                    </div>
+                </div>
+                <div class="newspage-image">
+                    <img src="tmp/kcp.jpg" alt="" class="img-responsive">
+                </div>
+            </article>
+        </div>
+        <div class="block_wrap">
+            <div class="grid">
+                <div class="col s-12 m-7 l-7">
+                    <div class="newspage_text">
+                        <h4>Незрівнянний яхтинг
+                            на хвилях Дніпра</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis odio sem, at
+                            vehicula
+                            magna convallis quis. Nulla cursus turpis dignissim blandit suscipit. Donec consectetur,
+                            libero at porta consectetur, leo lectus pretium nisl, id convallis odio justo sit amet eros.
+                            Donec a pellentesque ligula. Sed non odio mi. Sed et lorem sodales, vestibulum eros id,
+                            imperdiet ex. Cras porttitor diam quis placerat aliquam. Phasellus accumsan sapien libero, a
+                            finibus quam maximus ac. Suspendisse potenti.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis odio sem, at
+                            vehicula
+                            magna convallis quis. Nulla cursus turpis dignissim blandit suscipit. Donec consectetur,
+                            libero at porta consectetur, leo lectus pretium nisl, id convallis odio justo sit amet eros.
+                            Donec a pellentesque ligula. Sed non odio mi. Sed et lorem sodales, vestibulum eros id,
+                            imperdiet ex. Cras porttitor diam quis placerat aliquam. Phasellus accumsan sapien libero, a
+                            finibus quam maximus ac. Suspendisse potenti.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis odio sem, at
+                            vehicula
+                            magna convallis quis. Nulla cursus turpis dignissim blandit suscipit. Donec consectetur,
+                            libero at porta consectetur, leo lectus pretium nisl, id convallis odio justo sit amet eros.
+                            Donec a pellentesque ligula. Sed non odio mi. Sed et lorem sodales, vestibulum eros id,
+                            imperdiet ex. Cras porttitor diam quis placerat aliquam. Phasellus accumsan sapien libero, a
+                            finibus quam maximus ac. Suspendisse potenti.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis odio sem, at
+                            vehicula
+                            magna convallis quis. Nulla cursus turpis dignissim blandit suscipit. Donec consectetur,
+                            libero at porta consectetur, leo lectus pretium nisl, id convallis odio justo sit amet eros.
+                            Donec a pellentesque ligula. Sed non odio mi. Sed et lorem sodales, vestibulum eros id,
+                            imperdiet ex. Cras porttitor diam quis placerat aliquam. Phasellus accumsan sapien libero, a
+                            finibus quam maximus ac. Suspendisse potenti.
+                        </p>
+                    </div>
+                    <div class="newspage_share">
+                        <span class="icon-share"></span>
+                        <span>ПОДІЛИТИСЬ</span><a href="#" class="icon-facebook"></a> <a href="#"
+                                                                                         class="icon-twitter"></a> <a
+                            href="#" class="icon-vk"></a>
+                    </div>
+                    <div class="newspage_tags">
+                        <span>КЛЮЧОВІ СЛОВА:</span> <a href="">#яхта</a> <a href="">#Дніпро</a> <a href="">#змагання</a><a
+                            href="">#яхта</a> <a href="">#Дніпро</a> <a href="">#змагання</a>
+                    </div>
+                    <div class="newspage_similar">
+                        <div class="newspage_title">ЧИТАЙТЕ ТАКОЖ:</div>
+                        <div class="newspage_similar_items">
+                            <a href="#">Два тролейбуси змінили напрямок руху</a><br>
+                            <a href="#">Два тролейбуси змінили напрямок руху</a><br>
+                            <a href="#">Два тролейбуси змінили напрямок руху</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-4 s-12 s-gap-0 m-gap-0 m-5 l-gap-1 newspage_right">
+                    <div class="block-title">
+                        Гарячі новини
+                    </div>
+                    <div class="blue_bg newspage_right_item">
+                        <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                            <a href="#"></a>
+                            <div class="news_block_underlink">Відбулася регата на яхтах
+                            </div>
+                            <div class="news_block_info news_bg">
+                                <strong class="txt_c news_text_app">Відбулася регата на яхтах
+                                    <i>15 лютого 2017</i>
+                                </strong>
+                                <div class="news_block_btop">
+                                    АА благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку,
+                                    дитячий будинок
+                                </div>
+                                <em>Детальнiше <span class="icon-next_circle"></span></em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=green_bg newspage_right_item">
+                        <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                            <a href="#"></a>
+                            <div class="news_block_underlink">Відбулася регата на яхтах
+                            </div>
+                            <div class="news_block_info news_bg">
+                                <strong class="txt_c news_text_app">Відбулася регата на яхтах
+                                    <i>15 лютого 2017</i>
+                                </strong>
+                                <div class="news_block_btop">
+                                    АА благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку,
+                                    дитячий будинок
+                                </div>
+                                <em>Детальнiше <span class="icon-next_circle"></span></em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lemon_bg newspage_right_item">
+                        <div class="news_block" style="background-image: url(tmp/2.jpg)">
+                            <a href="#"></a>
+                            <div class="news_block_underlink">Відбулася регата на яхтах
+                            </div>
+                            <div class="news_block_info news_bg">
+                                <strong class="txt_c news_text_app">Відбулася регата на яхтах
+                                    <i>15 лютого 2017</i>
+                                </strong>
+                                <div class="news_block_btop">
+                                    АА благодійний ярмарок, посольства, дипломатичні місії, сироти, люди похилого віку,
+                                    дитячий будинок
+                                </div>
+                                <em>Детальнiше <span class="icon-next_circle"></span></em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================================comments block-->
+        <div class="bg_darkgr">
+            <div class="block_wrap">
+                <div class="hdr h4 txt_c weight_400">Відгуки</div>
+                <div class="comments">
+                    <div class="grid">
+                        <div class="col s-8 xs-12 comments_block_line">
+                            <div class="comments_block_wrap">
+                                <div class="comments_block">
+                                    <div class="comments_block_title">
+                                        <div class="grid">
+                                            <div class="col s-8">
+                                                <span class="h4">Олексій</span>
+                                                <span class="rating-block"><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span>
+                                                </span>
+                                                <span class="rating-block-up">
+                                                    <a href="#" class="icon-like"><small>12</small></a>
+                                                </span>
+                                            </div>
+                                            <div class="col s-4 txt_r">
+                                                <span class="smaller-text">14 грудня 2016</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments_block_text">
+                                        <p>
+                                            Цікавий маршрут. Для туриста - саме воно
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="comments_block">
+                                    <div class="comments_block_title">
+                                        <div class="grid">
+                                            <div class="col s-8">
+                                                <span class="h4">Олексій</span>
+                                                <span class="rating-block"><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span>
+                                                </span>
+                                                <span class="rating-block-up">
+                                                    <a href="#" class="icon-like"><small>12</small></a>
+                                                </span>
+                                            </div>
+                                            <div class="col s-4 txt_r">
+                                                <span class="smaller-text">14 грудня 2016</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments_block_text">
+                                        <p>
+                                            Не погане місце і досить приємні ціни. Гарні спеціалісти, усе зробили
+                                            якісно і швидко.
+                                            Прийду ще і раджу іншим!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="comments_block">
+                                    <div class="comments_block_title">
+                                        <div class="grid">
+                                            <div class="col s-8">
+                                                <span class="h4">Олексій</span>
+                                                <span class="rating-block"><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span>
+                                                </span>
+                                                <span class="rating-block-up">
+                                                    <a href="#" class="icon-like"><small>12</small></a>
+                                                </span>
+                                            </div>
+                                            <div class="col s-4 txt_r">
+                                                <span class="smaller-text">14 грудня 2016</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments_block_text">
+                                        <p>
+                                            Цікавий маршрут. Для туриста - саме воно
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="comments_block">
+                                    <div class="comments_block_title">
+                                        <div class="grid">
+                                            <div class="col s-8">
+                                                <span class="h4">Олексій</span>
+                                                <span class="rating-block"><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span><span class="icon-star"></span><span
+                                                        class="icon-star"></span>
+                                                </span>
+                                                <span class="rating-block-up">
+                                                    <a href="#" class="icon-like"><small>12</small></a>
+                                                </span>
+                                            </div>
+                                            <div class="col s-4 txt_r">
+                                                <span class="smaller-text">14 грудня 2016</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments_block_text">
+                                        <p>
+                                            Не погане місце і досить приємні ціни. Гарні спеціалісти, усе зробили
+                                            якісно і швидко.
+                                            Прийду ще і раджу іншим!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="comments_block_more">
+                                    <a href="#" class="small-text"><span class="icon-down"></span><span id="moretext">Більше</span>
+                                        (<span id="commcount"></span>)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s-4">
+                            <div class="comments_block_form">
+                                <form action="">
+                                    <div class="form-title">
+                                        ЗАЛИШИТИ ВІДГУК
+                                        <span class="rating-block"><span
+                                                class="icon-star_blank"></span><span
+                                                class="icon-star_blank"></span><span
+                                                class="icon-star_blank"></span><span
+                                                class="icon-star_blank"></span><span
+                                                class="icon-star_blank"></span>
+                                                </span>
+                                    </div>
+                                    <div class="form"><input type="text" id="vname" name="vname"
+                                                             placeholder="Ваше ім’я" class="fld smaller-text"></div>
+                                    <div class="form"><textarea name="msg" id="msg" placeholder="Відгук"
+                                                                class="smaller-text"></textarea>
+                                    </div>
+                                    <div class="form txt_r">
+                                        <button class="btn">ВІДПРАВИТИ</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//====================-->
+        <footer>
+            <div class="footer_top">
+                <div class="grid footer_socials">
+                    <div class="col xx-3">
+                        <a class="icon-vk" href="#"></a>
+                    </div>
+                    <div class="col xx-3">
+                        <a class="icon-facebook" href="#"></a>
+                    </div>
+                    <div class="col xx-3">
+                        <a class="icon-twitter" href="#"></a>
+                    </div>
+                    <div class="col xx-3">
+                        <a class="icon-instagram" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="block_wrap">
+                <div class="grid">
+                    <div class="col s-12 m-4">
+                        <div class="h4 hdr">ОТРИМАТИ ПІДПИСКУ</div>
+                        <div>Підпишись на нашу розсилку та будь у курсі усіх подій міста!</div>
+                        <form class="ftr_subscr">
+                            <input type="text">
+                            <span class="h4 icon-next"></span>
+                        </form>
+                    </div>
+                    <div class="col s-3 m-gap-2 m-2 ftr_menu">
+                        <ul>
+                            <li>
+                                <a href="#"><strong>Афіша</strong></a>
+                            </li>
+                            <li>
+                                <a href="#">Відпочинок</a>
+                            </li>
+                            <li>
+                                <a href="#">Kyiv City Package</a>
+                            </li>
+                            <li>
+                                <a href="#">Маршрути</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s-3 m-2 ftr_menu">
+                        <ul>
+                            <li>
+                                <a href="#"><strong>Афіша</strong></a>
+                            </li>
+                            <li>
+                                <a href="#">Відпочинок</a>
+                            </li>
+                            <li>
+                                <a href="#">Kyiv City Package</a>
+                            </li>
+                            <li>
+                                <a href="#">Маршрути</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s-3 m-2 ftr_menu">
+                        <ul>
+                            <li>
+                                <a href="#"><strong>Афіша</strong></a>
+                            </li>
+                            <li>
+                                <a href="#">Відпочинок</a>
+                            </li>
+                            <li>
+                                <a href="#">Kyiv City Package</a>
+                            </li>
+                            <li>
+                                <a href="#">Маршрути</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--block_wrap-->
+            <div class="nav">
+                <ul class="grid txt_c fluid">
+                    <li class="col">
+                        <a href="#">MEDIA</a>
+                    </li>
+                    <li class="col">
+                        <a href="#">TRAVEL MARKET</a>
+                    </li>
+                    <li class="col">
+                        <a href="#">CONVENTION BUREAU</a>
+                    </li>
+                    <li class="col">
+                        <a href="#">TOURISTIC CENTRES</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div class="ftr_underbottom">
+            <div class="block_wrap">
+                <div class="grid">
+                    <div class="s-4 l-2 m-2">
+                        <a href="#" class="logo"></a>
+                    </div>
+                    <div class="s-8 xs-12 txt_l">
+                        <div class="ftr_underbottom_text">© 2016 Офіційний сайт Управління туризму КМДА, Усі права
+                            захищено
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/icons/style.css">
+<link rel="stylesheet" href="css/lightslider.min.css">
+<link rel="stylesheet" href="css/jquery.datetimepicker.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/slick-theme.css">
+<link rel="stylesheet" href="js/fancy/jquery.fancybox.css">
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/fancy/jquery.fancybox.js"></script>
+<script src="js/lightslider.min.js"></script>
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/readmore.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/main2.js"></script>
+<script>
+    var map;
+    function initialize() {
+        var mapOptions = {
+            zoom: 12,
+            center: new google.maps.LatLng(50.486577, 30.497426)
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        var directionsService = new google.maps.DirectionsService();
+        directionsDisplay.setMap(map);
+        directionsDisplay.setOptions({suppressMarkers: true, suppressInfoWindows: true});
+
+        var start_point = new google.maps.LatLng(50.486577, 30.497426);
+        var end_point = new google.maps.LatLng(50.386577, 30.297426);
+
+        var marker = new google.maps.Marker({
+            position: start_point,
+            map: map
+        });
+
+        var marker = new google.maps.Marker({
+            position: end_point,
+            map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, this);
+        });
+
+        var request = {
+            origin: start_point,
+            destination: end_point,
+            travelMode: google.maps.TravelMode.WALKING,
+            unitSystem: google.maps.UnitSystem.METRIC,
+            provideRouteAlternatives: true,
+            avoidHighways: false,
+            avoidTolls: true
+        };
+        directionsService.route(request, function (result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(result);
+                var routes = result.routes;
+                var leg = routes[0].legs;
+                var lenght = leg[0].distance.text;
+                var duration = leg[0].duration.text;
+                infowindow = new google.maps.InfoWindow({content: 'Довжина: ' + lenght + '<br>Час: ' + duration});
+                infowindow.open(map, marker);
+            }
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</body>
+</html>
