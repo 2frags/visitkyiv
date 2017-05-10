@@ -1,5 +1,43 @@
+Share = {
+    vkontakte: function(purl, ptitle, pimg, text) {
+        url  = 'http://vkontakte.ru/share.php?';
+        url += 'url='          + encodeURIComponent(purl);
+        url += '&title='       + encodeURIComponent(ptitle);
+        url += '&description=' + encodeURIComponent(text);
+        url += '&image='       + encodeURIComponent(pimg);
+        url += '&noparse=true';
+        Share.popup(url);
+    },
+    facebook: function(purl, ptitle, pimg, text) {
+        url  = 'http://www.facebook.com/sharer.php?s=100';
+        url += '&p[title]='     + encodeURIComponent(ptitle);
+        url += '&p[summary]='   + encodeURIComponent(text);
+        url += '&p[url]='       + encodeURIComponent(purl);
+        url += '&p[images][0]=' + encodeURIComponent(pimg);
+        Share.popup(url);
+    },
+    twitter: function(purl, ptitle) {
+        url  = 'http://twitter.com/share?';
+        url += 'text='      + encodeURIComponent(ptitle);
+        url += '&url='      + encodeURIComponent(purl);
+        url += '&counturl=' + encodeURIComponent(purl);
+        Share.popup(url);
+    },
+
+    popup: function(url) {
+        window.open(url,'','toolbar=0,status=0,width=626,height=436');
+    }
+};
+
 var mainmenu = '#mainmenu';
 $(document).ready(function() {
+        $( '.news_block, ul#mainmenu li:has(ul)' ).doubleTapToGo();
+	$('.slider_wide').addClass('notactive');
+    $(".read_more1").click(function() {
+        $(".item_hide").css("display","inline-block");
+        $(this).hide();
+    });
+
     //===============sticky header
     var scrollTimeout;
     scrolled = 0;
@@ -81,7 +119,7 @@ $(document).ready(function() {
     //================== events_slider
     var $sliders = $(".slider_wide");
     var $arrows = $('.arr_wrap');
-
+$('.slider_wide').imagesLoaded( function() {
     $(".slide_count").each(function() {
 
         var $this = $(this);
@@ -92,7 +130,8 @@ $(document).ready(function() {
             $this.find('.arr_wrap').find('.slide_num span').text(curr_slide);
             $this.find('.arr_wrap').find('.slide_num sup').text('/' + slidecount);
         });
-        var slick = $this.find($sliders).slick({
+        if($(this).hasClass('withoutsecond')){
+               var slick = $this.find($sliders).slick({
             autoplay: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -100,6 +139,18 @@ $(document).ready(function() {
             prevArrow: '<span class="icon-prev"></span>',
             nextArrow: '<span class="icon-next"></span>'
         });
+           } else{
+               var slick = $this.find($sliders).slick({
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            appendArrows: $this.find($arrows),
+              asNavFor: '.slider_wide_arrow',
+            prevArrow: '<span class="icon-prev"></span>',
+            nextArrow: '<span class="icon-next"></span>'
+        });
+           }
+     
         slick.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             var curr_slide = nextSlide + 1;
             curr_slide = (curr_slide < 10) ? '0' + curr_slide : curr_slide;
@@ -107,9 +158,25 @@ $(document).ready(function() {
         });
 
     });
+		$('.slider_wide').removeClass('.notactive');
+});
+
+$('.slider_wide_arrow').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider_wide',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  vertical: true
+});
 
 
-    $('#package_slider').slick({
+$('#package_slider').imagesLoaded( function() {
+    $('#package_slider').on('init', function(slick) {
+            console.log('fired!');
+            $('#package_slider').fadeIn(3000);
+        }).slick({
         autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -117,9 +184,23 @@ $(document).ready(function() {
         prevArrow: '<span class="icon-prev"></span>',
         nextArrow: '<span class="icon-next"></span>'
     });
+	$('#package_slider').removeClass('.notactive');
+});
+
+ $('#vvidos_slider').slick({
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        appendArrows: $("<div></div>").addClass("arr_wrap").insertAfter("#vvidos_slider"),
+        prevArrow: '<span class="icon-prev"></span>',
+        nextArrow: '<span class="icon-next"></span>'
+    });
 
 
-    $('#offers_slider').slick({
+$('#offers_slider').imagesLoaded( function() {
+    $('#offers_slider').on('init', function(slick) {
+            $('#offers_slider').fadeIn(3000);
+        }).slick({
         autoplay: true,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -155,7 +236,8 @@ $(document).ready(function() {
             }
         ]
     });
-
+$('#offers_slider').removeClass('.notactive');
+});
     //========================= datetimepicker
     $('#tv22').datetimepicker({
         format: 'unixtime',
@@ -214,4 +296,23 @@ $(document).ready(function() {
         mainmenu_pos('.icon-menu');
         $('body').removeClass('js-menu_on');
     }
+
+    //Изиенить пароль
+    $("#reset_password").click(function() {
+        $(".password_re").fadeIn("fast");
+    });
+
+    //KCP buy link
+    $(".show_kcc_form, .kcc_price_form_bk_link a").click(function() {
+        var outerblock = $(this).closest('.kcc_price_item_outer');
+        outerblock.toggleClass('_opened');
+        outerblock.siblings().toggle();
+        if(outerblock.hasClass('_opened'))
+        {
+            outerblock.removeClass('l-4 s-4').addClass('l-12 s-12');
+        } else{
+            outerblock.addClass('l-4 s-4').removeClass('l-12 s-12');
+        }
+        return false;
+    });
 })

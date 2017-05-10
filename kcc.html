@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8">
     <title>Вся афіша</title>
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/icons/style.css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="js/fancy/jquery.fancybox.css">
+    <link rel="stylesheet" href="js/chosen/chosen.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-
 <body>
 <div class="grid js-main_wrap">
     <div class="col1 js_inner_wrap">
         <div class="content_all_wrapp">
             <div class="page_hdr">
                 <header>
-
                     <div class="hdr_top grid v_middl">
                         <div class="col xx-5 s-4 m-3">
                             <div class="top_info">
                                 <span>Tourist info</span>
                                 <span class="icon-phone2">1551</span>
-
                             </div>
                         </div>
                         <div class="col xx-4 m-6">
@@ -250,10 +254,12 @@
                                             <a href="/page/izvestnye_kievlyane">Видатні кияни</a>
                                         </li>
                                         <li>
-                                            <a href="/page/20_vecshej_kotorye_stoit__sdelat_v_gorode">20 речей, які варто зробити у місті</a>
+                                            <a href="/page/20_vecshej_kotorye_stoit__sdelat_v_gorode">20 речей, які
+                                                варто зробити у місті</a>
                                         </li>
                                         <li>
-                                            <a href="/page/kiev:_bezopasnyj_i_uyutnyj">Київ: безпечний, затишний та доступний</a>
+                                            <a href="/page/kiev:_bezopasnyj_i_uyutnyj">Київ: безпечний, затишний та
+                                                доступний</a>
                                         </li>
                                         <li>
                                             <a href="/page/fakty">Факти</a>
@@ -263,7 +269,8 @@
                                 <li class="top_search_block">
                                     <div class="top_search  sign-search">
                                         <form action="/search.php">
-                                            <input type="text" name="search" value="" placeholder="Пошук..." class="fld clr_none">
+                                            <input type="text" name="search" value="" placeholder="Пошук..."
+                                                   class="fld clr_none">
                                             <input type="submit" class="btn clr_none">
                                         </form>
                                     </div>
@@ -274,19 +281,179 @@
                             <div class="btn brdr icon-menu" data-target="#mainmenu"></div>
                         </div>
                     </div>
-
                 </header>
             </div>
-
+            <div class="kcc_main_image"></div>
             <div class="block_wrap">
                 <article class="article">
-                    <div class="crumbs">
-                        <ul>
-                            <li><a href="/">Головна</a></li>›
-                            <li><span>Афіша</span></li>
+                    <h1 class="h2 txt_c">KyivPass</h1>
+                    <div class="kcc_txt_wrp">
+                        <div class="txt_normal">
+                            <p>
+                                The card also comes with discounted entry to other attractions, such as the Rijksmuseum,
+                                Heineken Experience, Madame Tussauds and Amsterdam Dungeon. Valid for 24, 48, 72 or 96
+                                hours
+                                from first use, unlimited access to the city's public transportation system for the
+                                duration
+                                of your card allows you to get around quickly. You can also enjoy one free canal cruise
+                                from
+                                several canal cruise companies at many locations in Amsterdam.
+                            </p>
+                        </div>
+                        <ul class="kcc_rads">
+                            <li class="kcc_rads1">
+                                Безкоштовний<br>
+                                транспорт
+                            </li>
+                            <li class="kcc_rads2">
+                                Безкоштовний вхід<br>
+                                у музеї та пам’ятки
+                            </li>
+                            <li class="kcc_rads3">
+                                Знижки та безкоштовний<br>
+                                вхід на заходи міста
+                            </li>
                         </ul>
                     </div>
-                    <h1 class="h2 txt_c">Афіша</h1>
+                </article>
+            </div>
+            <div class="kcc_price_wrap">
+                <div class="block_wrap">
+                    <div class="block_wrap-mw">
+                        <div class="grid">
+                            <div class="l-4 s-4 xs-12 kcc_price_item_outer">
+                                <div class="kcc_price_item_w">
+                                    <div class="kcc_price_item">
+                                        <div class="kcc_price_item_form">
+                                            <div class="kcc_price_item_form_title">Ваші контакти</div>
+                                            <form action="">
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="Імя">
+                                                </div>
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="e-mail"></div>
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="Телефон">
+                                                </div>
+                                                <div class="filter-form-item checkbox-form clearfix">
+                                                    <input type="checkbox" class="checkbox" value="3"
+                                                           name="duration_ids[]"
+                                                           id="h24">
+                                                    <label for="h24">Я погоджуюсь <a href="#">з правилами
+                                                        сервісу</a></label>
+                                                    <!--<span class="filter-form-count">12</span>-->
+                                                </div>
+                                                <div class="kcc_price_form_bk_link"><a href="#"><span
+                                                        class="icon-prev"></span>Назад</a></div>
+                                            </form>
+                                        </div>
+                                        <div class="kcc_price_item_right">
+                                            <div class="kcc_price_item_title">
+                                                <strong>24<i>h</i></strong>
+                                                <span>KyivPass</span>
+                                            </div>
+                                            <div class="kcc_price_item_subtitle">
+                                                <span class="kcc_price_item_subtitle_bg">24</span>
+                                                <span class="zi4"><sub>Ціна:</sub> <strong>300</strong> <sup>uah</sup></span>
+                                            </div>
+                                            <div class="kcc_price_item_click">
+                                                <a href="#" class="btn show_kcc_form">ПРИДБАТИ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-4 s-4 xs-12 kcc_price_item_outer">
+                                <div class="kcc_price_item_w">
+                                    <div class="kcc_price_item">
+                                        <div class="kcc_price_item_form">
+                                            <div class="kcc_price_item_form_title">Ваші контакти</div>
+                                            <form action="">
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="Імя">
+                                                </div>
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="e-mail"></div>
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="Телефон">
+                                                </div>
+                                                <div class="filter-form-item checkbox-form clearfix">
+                                                    <input type="checkbox" class="checkbox" value="3"
+                                                           name="duration_ids[]"
+                                                           id="h48">
+                                                    <label for="h48">Я погоджуюсь <a href="#">з правилами
+                                                        сервісу</a></label>
+                                                    <!--<span class="filter-form-count">12</span>-->
+                                                </div>
+                                                <div class="kcc_price_form_bk_link"><a href="#"><span
+                                                        class="icon-prev"></span>Назад</a></div>
+                                            </form>
+                                        </div>
+                                        <div class="kcc_price_item_right">
+                                            <div class="kcc_price_item_title">
+                                                <strong>48<i>h</i></strong>
+                                                <span>KyivPass</span>
+                                            </div>
+                                            <div class="kcc_price_item_subtitle">
+                                                <span class="kcc_price_item_subtitle_bg">48</span>
+                                                <span class="zi4"><sub>Ціна:</sub> <strong>600</strong> <sup>uah</sup></span>
+                                            </div>
+                                            <div class="kcc_price_item_click">
+                                                <a href="#" class="btn show_kcc_form">ПРИДБАТИ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-4 s-4 xs-12 kcc_price_item_outer">
+                                <div class="kcc_price_item_w">
+                                    <div class="kcc_price_item">
+                                        <div class="kcc_price_item_form">
+                                            <div class="kcc_price_item_form_title">Ваші контакти</div>
+                                            <form action="">
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="Імя">
+                                                </div>
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="e-mail"></div>
+                                                <div class="kcc_price_item_form_item"><input type="text"
+                                                                                             placeholder="Телефон">
+                                                </div>
+                                                <div class="filter-form-item checkbox-form clearfix">
+                                                    <input type="checkbox" class="checkbox" value="3"
+                                                           name="duration_ids[]"
+                                                           id="h72">
+                                                    <label for="h72">Я погоджуюсь <a href="#">з правилами
+                                                        сервісу</a></label>
+                                                    <!--<span class="filter-form-count">12</span>-->
+                                                </div>
+                                                <div class="kcc_price_form_bk_link"><a href="#"><span
+                                                        class="icon-prev"></span>Назад</a></div>
+                                            </form>
+                                        </div>
+                                        <div class="kcc_price_item_right">
+                                            <div class="kcc_price_item_title">
+                                                <strong>72<i>h</i></strong>
+                                                <span>KyivPass</span>
+                                            </div>
+                                            <div class="kcc_price_item_subtitle">
+                                                <span class="kcc_price_item_subtitle_bg">72</span>
+                                                <span class="zi4"><sub>Ціна:</sub> <strong>900</strong> <sup>uah</sup></span>
+                                            </div>
+                                            <div class="kcc_price_item_click">
+                                                <a href="#" class="btn show_kcc_form">ПРИДБАТИ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block_wrap">
+                <article class="article">
+                    <h1 class="h2 txt_c">Що входить до KyivPass</h1>
                 </article>
                 <div class="rss-block txt_r">
                     <a href="/rss/events">RSS<span class="icon-rss"></span></a>
@@ -316,40 +483,45 @@
                                     </div>
                                 </div>
                                 <div class="filter-form-btn">
-                                    <input type="submit" class="btn btn_full btn_big" value="Пошук" onclick="$('.month_ckb').attr('checked',false); $('.period_chk').attr('checked',false)">
+                                    <input type="submit" class="btn btn_full btn_big" value="Пошук"
+                                           onclick="$('.month_ckb').attr('checked',false); $('.period_chk').attr('checked',false)">
                                 </div>
                             </div>
-
                             <div class="filter-block">
                                 <div class="filter-form">
-
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="5"  name="loc_cat_ids[]" id="loc_cat0" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="5" name="loc_cat_ids[]"
+                                               id="loc_cat0" onchange="document.filter_form.submit()"/>
                                         <label for="loc_cat0">Розваги</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="7"  name="loc_cat_ids[]" id="loc_cat1" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="7" name="loc_cat_ids[]"
+                                               id="loc_cat1" onchange="document.filter_form.submit()"/>
                                         <label for="loc_cat1">Пам'ятки</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="8"  name="loc_cat_ids[]" id="loc_cat2" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="8" name="loc_cat_ids[]"
+                                               id="loc_cat2" onchange="document.filter_form.submit()"/>
                                         <label for="loc_cat2">Гастрономія</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="9"  name="loc_cat_ids[]" id="loc_cat3" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="9" name="loc_cat_ids[]"
+                                               id="loc_cat3" onchange="document.filter_form.submit()"/>
                                         <label for="loc_cat3">Розміщення</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="10"  name="loc_cat_ids[]" id="loc_cat4" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="10" name="loc_cat_ids[]"
+                                               id="loc_cat4" onchange="document.filter_form.submit()"/>
                                         <label for="loc_cat4">Нічне життя</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="11"  name="loc_cat_ids[]" id="loc_cat5" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="11" name="loc_cat_ids[]"
+                                               id="loc_cat5" onchange="document.filter_form.submit()"/>
                                         <label for="loc_cat5">Активний відпочинок</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
@@ -359,22 +531,25 @@
                                             <span class="count_of_fltr_txt">Ещё</span>
                                             <span class="count_of_fltr"></span></a>
                                     </div>
-
                                 </div>
                             </div>
-
                             <div class="filter-block">
                                 <div class="filter-form">
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox period_chk"   value="1" name="day" id="day" onchange="$('.month_ckb').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox period_chk" value="1" name="day" id="day"
+                                               onchange="$('.month_ckb').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="day">День</label>
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox period_chk"  value="1" name="week" id="week" onchange="$('.month_ckb').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox period_chk" value="1" name="week"
+                                               id="week"
+                                               onchange="$('.month_ckb').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="week">Тиждень</label>
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox period_chk"  value="1" name="weekend" id="weekend" onchange="$('.month_ckb').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox period_chk" value="1" name="weekend"
+                                               id="weekend"
+                                               onchange="$('.month_ckb').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="weekend">Вихідні</label>
                                     </div>
                                     <div class="filter-form-item-more">
@@ -384,71 +559,96 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="filter-block">
                                 <div class="filter-form">
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="5" name="mounth[]" id="mounth5" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="5" name="mounth[]"
+                                               id="mounth5"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth5">Травень 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="6" name="mounth[]" id="mounth6" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="6" name="mounth[]"
+                                               id="mounth6"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth6">Червень 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="7" name="mounth[]" id="mounth7" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="7" name="mounth[]"
+                                               id="mounth7"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth7">Липень 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="8" name="mounth[]" id="mounth8" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="8" name="mounth[]"
+                                               id="mounth8"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth8">Серпень 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="9" name="mounth[]" id="mounth9" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="9" name="mounth[]"
+                                               id="mounth9"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth9">Вересень 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="10" name="mounth[]" id="mounth10" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="10" name="mounth[]"
+                                               id="mounth10"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth10">Жовтень 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="11" name="mounth[]" id="mounth11" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="11" name="mounth[]"
+                                               id="mounth11"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth11">Листопад 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="12" name="mounth[]" id="mounth12" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="12" name="mounth[]"
+                                               id="mounth12"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth12">Грудень 2017</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="13" name="mounth[]" id="mounth13" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="13" name="mounth[]"
+                                               id="mounth13"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth13">Січень 2018</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="14" name="mounth[]" id="mounth14" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="14" name="mounth[]"
+                                               id="mounth14"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth14">Лютий 2018</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="15" name="mounth[]" id="mounth15" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="15" name="mounth[]"
+                                               id="mounth15"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth15">Березень 2018</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="16" name="mounth[]" id="mounth16" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="16" name="mounth[]"
+                                               id="mounth16"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth16">Квітень 2018</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox month_ckb"  value="17" name="mounth[]" id="mounth17" onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox month_ckb" value="17" name="mounth[]"
+                                               id="mounth17"
+                                               onchange="$('.period_chk').attr('checked',false);document.filter_form.submit()"/>
                                         <label for="mounth17">Травень 2018</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
@@ -459,67 +659,78 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="filter-block">
                                 <div class="filter-form">
-
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="108"  name="location_ids[]" id="locations0" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="108" name="location_ids[]"
+                                               id="locations0" onchange="document.filter_form.submit()"/>
                                         <label for="locations0">Національний палац мистецтв «Україна»</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="109"  name="location_ids[]" id="locations1" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="109" name="location_ids[]"
+                                               id="locations1" onchange="document.filter_form.submit()"/>
                                         <label for="locations1">НСК «Олімпійський»</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="112"  name="location_ids[]" id="locations2" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="112" name="location_ids[]"
+                                               id="locations2" onchange="document.filter_form.submit()"/>
                                         <label for="locations2">Софійська площа</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="113"  name="location_ids[]" id="locations3" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="113" name="location_ids[]"
+                                               id="locations3" onchange="document.filter_form.submit()"/>
                                         <label for="locations3">Міжнародний виставковий центр</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="115"  name="location_ids[]" id="locations4" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="115" name="location_ids[]"
+                                               id="locations4" onchange="document.filter_form.submit()"/>
                                         <label for="locations4">Національний цирк України</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="123"  name="location_ids[]" id="locations5" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="123" name="location_ids[]"
+                                               id="locations5" onchange="document.filter_form.submit()"/>
                                         <label for="locations5">Контрактова площа</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="133"  name="location_ids[]" id="locations6" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="133" name="location_ids[]"
+                                               id="locations6" onchange="document.filter_form.submit()"/>
                                         <label for="locations6">Хрещатик</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="145"  name="location_ids[]" id="locations7" onchange = "document.filter_form.submit()"/>
-                                        <label for="locations7">Національний музей мистецтв імені Богдана та Варвари Ханенків</label>
+                                        <input type="checkbox" class="checkbox" value="145" name="location_ids[]"
+                                               id="locations7" onchange="document.filter_form.submit()"/>
+                                        <label for="locations7">Національний музей мистецтв імені Богдана та Варвари
+                                            Ханенків</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="167"  name="location_ids[]" id="locations8" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="167" name="location_ids[]"
+                                               id="locations8" onchange="document.filter_form.submit()"/>
                                         <label for="locations8">Майдан Незалежності</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="277"  name="location_ids[]" id="locations9" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="277" name="location_ids[]"
+                                               id="locations9" onchange="document.filter_form.submit()"/>
                                         <label for="locations9">Мистецький Арсенал</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="398"  name="location_ids[]" id="locations10" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="398" name="location_ids[]"
+                                               id="locations10" onchange="document.filter_form.submit()"/>
                                         <label for="locations10">Євроклуб, офіційна фан-зона "Євробачення 2017"</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
                                     <div class="filter-form-item checkbox-form clearfix">
-                                        <input type="checkbox" class="checkbox" value="399"  name="location_ids[]" id="locations11" onchange = "document.filter_form.submit()"/>
+                                        <input type="checkbox" class="checkbox" value="399" name="location_ids[]"
+                                               id="locations11" onchange="document.filter_form.submit()"/>
                                         <label for="locations11">Kyiv Art</label>
                                         <!--<span class="filter-form-count">12</span>-->
                                     </div>
@@ -536,14 +747,16 @@
                     <div class="col l-8 s-7 m-8 s-gap-0 l-gap-1 routesblock">
                         <div class="grid">
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_faaa5eafb6.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_faaa5eafb6.jpg)">
                                     <a href="/events/gorodok_evrovidenie"></a>
-                                     <span class="news_bg simple_span_top">
-                                         01.05 - 14.05.2017<br>
-                                         <span class="icon-location"></span> Хрещатик                                     </span>
-                                    <strong>Eurovillage, офіційна фан-зона пісенного конкурсу "Євробачення 2017"</strong>
+                                     <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
+                                    <strong>Eurovillage, офіційна фан-зона пісенного конкурсу "Євробачення
+                                        2017"</strong>
                                     <div class="news_block_info news_bg">
-                                        <strong class="txt_c ">Eurovillage, офіційна фан-зона пісенного конкурсу "Євробачення 2017"</strong>
+                                        <strong class="txt_c ">Eurovillage, офіційна фан-зона пісенного конкурсу
+                                            "Євробачення 2017"</strong>
                                         <span class="txt_l text_nj">&nbsp;Євроселище триватиме з &nbsp;1 по 14 травня з 12 до 22 год. Місцем розташування локації..</span>
                                         <div class="news_block_btop">
                                             <div class="news_block_btop_2">01.05 - 14.05.2017</div>
@@ -554,14 +767,15 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_4522e4cd3e.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_4522e4cd3e.jpg)">
                                     <a href="/events/evroklub_oficialnaya_lokaciya_evrovideniya_2017"></a>
-                                     <span class="news_bg simple_span_top">
-                                         02.05 - 13.05.2017<br>
-                                         <span class="icon-location"></span> Євроклуб, офіційна фан-зона "Євробачення 2017"                                     </span>
+                                     <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>Euroclub, офіційна фан зона пісенного конкурсу "Євробачення 2017"</strong>
                                     <div class="news_block_info news_bg">
-                                        <strong class="txt_c ">Euroclub, офіційна фан зона пісенного конкурсу "Євробачення 2017"</strong>
+                                        <strong class="txt_c ">Euroclub, офіційна фан зона пісенного конкурсу
+                                            "Євробачення 2017"</strong>
                                          <span class="txt_l text_nj">
 Євроклуб &nbsp;буде розташовано на території виставкового центру &laquo;Парковий&raquo; за..</span>
                                         <div class="news_block_btop">
@@ -573,11 +787,11 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_2fbf80226a.png)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_2fbf80226a.png)">
                                     <a href="/events/kyiv_art_fort"></a>
-                                     <span class="news_bg simple_span_top">
-                                         30.04 - 14.05.2017<br>
-                                         <span class="icon-location"></span> Kyiv Art                                     </span>
+                                   <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>Kyiv Art Fort</strong>
                                     <div class="news_block_info news_bg">
                                         <strong class="txt_c ">Kyiv Art Fort</strong>
@@ -592,14 +806,15 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_b1d6502291.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_b1d6502291.jpg)">
                                     <a href="/events/vo_vremya_mirovogo_turne_depeche_mode_priedet_v_kiev"></a>
-                                     <span class="news_bg simple_span_top">
-                                         19.07 - 19.07.2017<br>
-                                         <span class="icon-location"></span> НСК «Олімпійський»                                     </span>
+                           <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>Під час світового турне Depeche Mode завітає до Києва</strong>
                                     <div class="news_block_info news_bg">
-                                        <strong class="txt_c ">Під час світового турне Depeche Mode завітає до Києва</strong>
+                                        <strong class="txt_c ">Під час світового турне Depeche Mode завітає до
+                                            Києва</strong>
                                          <span class="txt_l text_nj">
 19 липня на НСК "Олімпійський" у рамках світового турне "Global Spirit Tour" відбудеться концерт..</span>
                                         <div class="news_block_btop">
@@ -611,12 +826,11 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_39ac9dd711.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_39ac9dd711.jpg)">
                                     <a href="/events/koncert_ansamblya_tanca_impvirskogo"></a>
-                                     <span class="news_bg simple_span_top">
-                                         18.05 - 18.05.2017<br>
-                                         <span class="icon-location"></span> Національний палац мистецтв «Україна»                                     </span>
-                                    <strong>Концерт ансамблю ім.П.Вірського</strong>
+                                    <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>                <strong>Концерт ансамблю ім.П.Вірського</strong>
                                     <div class="news_block_info news_bg">
                                         <strong class="txt_c ">Концерт ансамблю ім.П.Вірського</strong>
                                          <span class="txt_l text_nj">
@@ -630,11 +844,11 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_014f455e8d.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_014f455e8d.jpg)">
                                     <a href="/events/race_horizon_park_na_den_goroda"></a>
-                                     <span class="news_bg simple_span_top">
-                                         26.05 - 28.05.2017<br>
-                                         <span class="icon-location"></span> Хрещатик                                     </span>
+                              <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>Race Horizon Park на День міста</strong>
                                     <div class="news_block_info news_bg">
                                         <strong class="txt_c ">Race Horizon Park на День міста</strong>
@@ -648,11 +862,11 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_cfd384d00c.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_cfd384d00c.jpg)">
                                     <a href="/events/cirk_na_vode"></a>
-                                     <span class="news_bg simple_span_top">
-                                         10.03 - 21.05.2017<br>
-                                         <span class="icon-location"></span> Національний цирк України                                     </span>
+                                      <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>"Цирк на воді"</strong>
                                     <div class="news_block_info news_bg">
                                         <strong class="txt_c ">"Цирк на воді"</strong>
@@ -666,11 +880,11 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_aa350b4e98.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_aa350b4e98.jpg)">
                                     <a href="/events/probeg_pod_kashtanami"></a>
-                                     <span class="news_bg simple_span_top">
-                                         28.05 - 28.05.2017<br>
-                                         <span class="icon-location"></span> Майдан Незалежності                                     </span>
+                                     <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>"Пробіг під каштанами"</strong>
                                     <div class="news_block_info news_bg">
                                         <strong class="txt_c ">"Пробіг під каштанами"</strong>
@@ -684,11 +898,11 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_ad3428b086.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_ad3428b086.jpg)">
                                     <a href="/events/mezhdunarodnyj_arhitekturnyj_festival_canactions"></a>
-                                     <span class="news_bg simple_span_top">
-                                         02.06 - 03.06.2017<br>
-                                         <span class="icon-location"></span> Мистецький Арсенал                                     </span>
+                                      <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>Міжнародний архітектурний фестиваль CANactions</strong>
                                     <div class="news_block_info news_bg">
                                         <strong class="txt_c ">Міжнародний архітектурний фестиваль CANactions</strong>
@@ -702,11 +916,11 @@
                                 </div>
                             </div>
                             <div class="col l-6 s-12">
-                                <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_42534f9ff3.jpg)">
+                                <div class="news_block"
+                                     style="background-image: url(http://partners.visitkyiv.travel/useruploads/events_media/media_42534f9ff3.jpg)">
                                     <a href="/events/solor_run’17"></a>
-                                     <span class="news_bg simple_span_top">
-                                         04.06 - 04.06.2017<br>
-                                         <span class="icon-location"></span> Контрактова площа                                     </span>
+                                      <span class="news_bg simple_span_top kcparrow">
+                                         KyivPass</span>
                                     <strong>Сolor Run’17</strong>
                                     <div class="news_block_info news_bg">
                                         <strong class="txt_c ">Сolor Run’17</strong>
@@ -733,7 +947,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- ====================================================location-events block-->
             <div class="bg_gr ">
                 <div class="block_wrap">
@@ -748,7 +961,8 @@
                             <div>
                                 <div class="grid">
                                     <div class="col s-8">
-                                        <div class="news_block big_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_83714306ad.png)">
+                                        <div class="news_block big_block"
+                                             style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_83714306ad.png)">
                                             <a href="/kyiv_city_package/koncert_ansamblya_tanca_im_pvirskogo"></a>
                                             <!--<span class="sign-card"></span>-->
                                             <strong>Концерт ансамблю ім.П.Вірського</strong>
@@ -759,7 +973,9 @@
                                                 <a class="icon-vk" href=""></a>
                                             </div>
                                             <div class="news_block_info news_bg">
-                                                <strong>Концерт ансамблю ім.П.Вірського <div class="h1">-10<sup>%</sup></div></strong>
+                                                <strong>Концерт ансамблю ім.П.Вірського
+                                                    <div class="h1">-10<sup>%</sup></div>
+                                                </strong>
                                             <span>
 
 
@@ -782,7 +998,8 @@
                                         </div>
                                     </div>
                                     <div class="s-4 col">
-                                        <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_334773b401.jpg)">
+                                        <div class="news_block"
+                                             style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_334773b401.jpg)">
                                             <a href="/kyiv_city_package/gostinica_mir"></a>
                                             <span class="news_bg">-10%<!--<i class="sign-card"></i>--></span>
                                             <strong>Готель "Мир"</strong>
@@ -799,7 +1016,8 @@
                             <div>
                                 <div class="grid">
                                     <div class="col s-8">
-                                        <div class="news_block big_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_334773b401.jpg)">
+                                        <div class="news_block big_block"
+                                             style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_334773b401.jpg)">
                                             <a href="/kyiv_city_package/gostinica_mir"></a>
                                             <!--<span class="sign-card"></span>-->
                                             <strong>Готель "Мир"</strong>
@@ -810,7 +1028,9 @@
                                                 <a class="icon-vk" href=""></a>
                                             </div>
                                             <div class="news_block_info news_bg">
-                                                <strong>Готель "Мир" <div class="h1">-10<sup>%</sup></div></strong>
+                                                <strong>Готель "Мир"
+                                                    <div class="h1">-10<sup>%</sup></div>
+                                                </strong>
                                             <span>
 Готель "Мир" 3*** пропонує до ваших послуг 138 комфортабельних номерів, серед яких одно- і двомісні номери, номери "Люкс", напівлюкс і апартаменти. Номери оснащені кондиціонерами, супутниковим..</span>
                                                 <div class="date">03.01 - 31.12.2017</div>
@@ -828,7 +1048,8 @@
                                         </div>
                                     </div>
                                     <div class="s-4 col">
-                                        <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_ede4978173.png)">
+                                        <div class="news_block"
+                                             style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_ede4978173.png)">
                                             <a href="/kyiv_city_package/utrennie_grupovie_progulki_po_dnepru"></a>
                                             <span class="news_bg">-25%<!--<i class="sign-card"></i>--></span>
                                             <strong>Ранкові прогулянки на каяках Дніпром</strong>
@@ -846,7 +1067,8 @@
                             <div>
                                 <div class="grid">
                                     <div class="col s-8">
-                                        <div class="news_block big_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_ede4978173.png)">
+                                        <div class="news_block big_block"
+                                             style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_ede4978173.png)">
                                             <a href="/kyiv_city_package/utrennie_grupovie_progulki_po_dnepru"></a>
                                             <!--<span class="sign-card"></span>-->
                                             <strong>Ранкові прогулянки на каяках Дніпром</strong>
@@ -857,7 +1079,9 @@
                                                 <a class="icon-vk" href=""></a>
                                             </div>
                                             <div class="news_block_info news_bg">
-                                                <strong>Ранкові прогулянки на каяках Дніпром <div class="h1">-25<sup>%</sup></div></strong>
+                                                <strong>Ранкові прогулянки на каяках Дніпром
+                                                    <div class="h1">-25<sup>%</sup></div>
+                                                </strong>
                                             <span>Ранкові групові прогулянки на каяках по Дніпру.
 &nbsp;
 Тривалість прогулянки - дві..</span>
@@ -876,7 +1100,8 @@
                                         </div>
                                     </div>
                                     <div class="s-4 col">
-                                        <div class="news_block" style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_83714306ad.png)">
+                                        <div class="news_block"
+                                             style="background-image: url(http://partners.visitkyiv.travel/useruploads/packages/package_83714306ad.png)">
                                             <a href="#"></a>
                                             <span class="news_bg">-10%<!--<i class="sign-card"></i>--></span>
                                             <strong>Концерт ансамблю ім.П.Вірського</strong>
@@ -900,12 +1125,11 @@
                     <div class="small-grey ">* Постійний партнер туристичної карти</div>
                     <br>
                     <div class="txt_c">
-                        <a href="/kyiv_city_package" class="read_more">ПОКАЗАТИ ЩЕ <span class="icon-next_circle"></span></a>
+                        <a href="/kyiv_city_package" class="read_more">ПОКАЗАТИ ЩЕ <span
+                                class="icon-next_circle"></span></a>
                     </div>
                 </div>
             </div>
-
-
         </div>
         <div class="footer_bottom_wrapper">
             <footer>
@@ -925,7 +1149,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="block_wrap">
                     <div class="grid">
                         <div class="col s-12 m-4 __hide-on-ekran">
@@ -939,7 +1162,8 @@
                         <div class="col s-3 m-gap-2 m-2 ftr_menu">
                             <ul>
                                 <li>
-                                    <a href="/page/turisticheskie_informacionnye_centry_(tic)">Туристично-інформаційні центри</a>
+                                    <a href="/page/turisticheskie_informacionnye_centry_(tic)">Туристично-інформаційні
+                                        центри</a>
                                 </li>
                                 <li>
                                     <a href="/page/svyaz_s_nami">Зв'язок з нами</a>
@@ -948,9 +1172,9 @@
                                     <a href="/page/transport">Транспорт</a>
                                 </li>
                                 <li>
-                                    <a href="/page/inostrannye_diplomaticheskie_predstavitelstva_v_ukraine_(g_kiev)">Іноземні дипломатичні представництва в Україні (м. Київ)</a>
+                                    <a href="/page/inostrannye_diplomaticheskie_predstavitelstva_v_ukraine_(g_kiev)">Іноземні
+                                        дипломатичні представництва в Україні (м. Київ)</a>
                                 </li>
-
                             </ul>
                         </div>
                         <div class="col s-3 m-gap-2 m-2 ftr_menu">
@@ -991,7 +1215,6 @@
                         </li>
                     </ul>
                 </div>
-
             </footer>
             <div class="ftr_underbottom">
                 <div class="block_wrap">
@@ -1000,7 +1223,9 @@
                             <a href="/" class="logo"></a>
                         </div>
                         <div class="s-8 xs-12 txt_l">
-                            <div class="ftr_underbottom_text">© 2016 Офіційний сайт Управління туризму КМДА, Усі права захищено</div>
+                            <div class="ftr_underbottom_text">© 2016 Офіційний сайт Управління туризму КМДА, Усі права
+                                захищено
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1008,25 +1233,25 @@
         </div>
     </div>
 </div>
-<script src="/js/jquery-1.12.1.min.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/fancy/jquery.fancybox.js"></script>
-<script src="/js/chosen/chosen.jquery.js"></script>
-<script src="/js/lightslider.min.js"></script>
-<script src="/js/jquery.datetimepicker.js"></script>
-<script src="/js/slick.min.js"></script>
-<script src="/js/readmore.min.js"></script>
-<script src="/js/moment.min.js"></script>
-<script src="/js/doubletaptogo.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/main2.js"></script>
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/fancy/jquery.fancybox.js"></script>
+<script src="js/chosen/chosen.jquery.js"></script>
+<script src="js/lightslider.min.js"></script>
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/readmore.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/doubletaptogo.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/main2.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         $('.chosen').chosen({
-            no_results_text : "Не найдено",
+            no_results_text: "Не найдено",
             allow_single_deselect: "true",
-            search_contains : "true"
+            search_contains: "true"
         });
 
         //Readmore
@@ -1038,22 +1263,21 @@
         //Show more comments
         var allcomments = $(".comments .comments_block");
         var commcount = allcomments.length;
-        if(commcount>2)
-        {
+        if (commcount > 2) {
             $('#commcount').text(commcount);
-            x=2;
+            x = 2;
             allcomments.hide();
-            $('.comments .comments_block:lt('+x+')').show();
-            $(document).on("click", '.comments_block_more a:not(.__less)', function(e) {
+            $('.comments .comments_block:lt(' + x + ')').show();
+            $(document).on("click", '.comments_block_more a:not(.__less)', function (e) {
 
-                $('.comments .comments_block:lt('+commcount+')').show();
+                $('.comments .comments_block:lt(' + commcount + ')').show();
                 $(this).addClass('__less');
                 $('#moretext').text('Більше');
                 return false;
             });
-            $(document).on("click", '.comments_block_more a.__less', function(e) {
-                y = commcount-x;
-                $('.comments .comments_block').not(':lt('+y+')').hide();
+            $(document).on("click", '.comments_block_more a.__less', function (e) {
+                y = commcount - x;
+                $('.comments .comments_block').not(':lt(' + y + ')').hide();
                 $(this).removeClass('__less');
                 $('#moretext').text('Більше');
                 return false;
@@ -1061,19 +1285,19 @@
         }
 
         //Show more filters
-        $('.left_afisha .filter-form').each(function() {
+        $('.left_afisha .filter-form').each(function () {
             var allftlr = $(this).find('.filter-form-item');
             var allftlrcount = allftlr.length;
-            var y=5;
+            var y = 5;
             allftlr.hide();
-            allftlr.slice(0,y).show();
-            var hiddenelements = allftlrcount-y;
-            if(hiddenelements>0){
+            allftlr.slice(0, y).show();
+            var hiddenelements = allftlrcount - y;
+            if (hiddenelements > 0) {
                 $(this).find('.filter-form-item-more').show();
-                $(this).find('.filter-form-item-more .count_of_fltr').text('('+hiddenelements+')');
+                $(this).find('.filter-form-item-more .count_of_fltr').text('(' + hiddenelements + ')');
             }
         });
-        $(document).on("click", '.filter-form-item-more-link:not(.__less)', function(e) {
+        $(document).on("click", '.filter-form-item-more-link:not(.__less)', function (e) {
             var allftlr = $(this).closest('.filter-form').find('.filter-form-item');
             allftlr.show();
             $(this).addClass('__less');
@@ -1081,10 +1305,10 @@
             $(this).find('.count_of_fltr').hide();
             return false;
         });
-        $(document).on("click", '.filter-form-item-more-link.__less', function(e) {
-            var y=5;
+        $(document).on("click", '.filter-form-item-more-link.__less', function (e) {
+            var y = 5;
             var allftlr = $(this).closest('.filter-form').find('.filter-form-item');
-            allftlr.slice(y,100).hide();
+            allftlr.slice(y, 100).hide();
             $(this).removeClass('__less');
             $(this).find('.count_of_fltr_txt').text('Більше');
             $(this).find('.count_of_fltr').show();
@@ -1092,25 +1316,30 @@
         });
 
 
-        $('.lang_current').click(function() {
+        $('.lang_current').click(function () {
             $(this).closest('.lang_block').toggleClass('__opened');
         });
 
         //Для расскрывающихся списков */
-        $(".next_hide").click(function() {
+        $(".next_hide").click(function () {
             $(this).next().toggle("fast");
         });
     });
 </script>
-
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-78726421-1', 'auto');
     ga('send', 'pageview');
 </script>
 </body>
-
 </html>
