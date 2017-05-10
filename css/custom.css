@@ -628,6 +628,239 @@ html {
     float: right;
     margin-right: 10px;
 }
+.card_info_bottom
+{
+    font-size: 12px;
+    color: #b3b3b3;
+    margin: 26px 0 0 0;
+    line-height: 1.4;
+}
+.card_info_bottom strong{
+    display: block;
+    color: #474646;
+}
+.block_wrap2
+{
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+.btn.green_btn
+{
+    color: white;
+    background: #76b72a;
+    font-size: 12px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 0px;
+    width: 100%;
+}
+.btn.green_btn:hover{
+    color: white !important;
+    background-color: #558418;
+}
+.grey_li
+{
+    color: #b3b3b3;
+    font-size: 10px;
+    padding: 5px 0 10px 10px;
+    display: block;
+}
+.card_info_form label
+{
+    padding: 14px 10px 0 0;
+    color: #474646;
+    font-size: 12px;
+    display: block;
+}
+.block_wrap2_w
+{
+    padding: 15px 0 19px 0;
+    font-size: 12px;
+}
+.card_information_wrapper
+{
+    padding: 0px 1.2rem 2rem 1.2rem !important;
+}
+.card_information_text2
+{
+    padding: 0 10px;
+}
+.card_information_text2 input[type="text"]
+{
+    width: 100%;
+    border-radius: 0px;
+    font-size: 14px;
+    padding: 9px 10px 8px 10px;
+}
+.card_information_wrapper label
+{
+    font-size: 12px;
+    display: block;
+    padding: 12px 0 0 0;
+}
+.img-responsive
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.profile_card_has
+{
+    padding: 0 40px;
+    margin-bottom: 15px;
+    margin-top: 17px;
+}
+.profile_card_infoblock
+{
+    position: relative;
+    padding: 20px 30px 10px 0px;
+}
+.has_line
+{
+    border-right: 1px solid #cccccc;
+}
+.info-card_wrpa
+{
+    padding: 10px 0 10px 30px;
+}
+.__tableinfo
+{
+    width: 100%;
+    display: table;
+}
+.__tdinfo{
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.profile_card_infoblock
+{
+    font-size: 14px;
+    line-height: 1.6;
+}
+.profile_card_date
+{
+    color: #76b72a;
+    font-size: 21px;
+    margin: 15px 0;
+}
+.profile_card_number
+{
+    font-size: 16px;
+    margin: 5px 0;
+}
+.profile_card_number_link
+{
+    font-size: 12px;
+}
+.profile_card_number_link a{
+    text-decoration: underline;
+}
+.allkcp_titles
+{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 26px;
+}
+.kcp_tab_menu ul
+{
+    list-style: none;
+    font-size: 14px;
+}
+.kcp_tab_menu ul li{
+    margin: 0 20px 0 0;
+    display: inline-block;
+}
+.kcp_tabs_wrap
+{
+    margin: 20px 0 20px 0;
+}
+.kcp_tab_menu ul li a{
+    color: #4d4d4d;
+}
+.kcp_tab_menu ul li a.active{
+    text-decoration: underline;
+    color: #0097d7;
+}
+.kcp_item_block_img
+{
+    border-bottom: 4px solid #0097d7;
+    position: relative;
+}
+.kcp_item_block_img a{
+    display: block;
+    width: 100%;
+    padding: 30px 10%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    color: white;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+.kcp_item_block{
+    background: #D6EAF0;
+    padding: 18px 30px;
+    margin: 20px 0;
+}
+.green_line
+{
+    color: #76b72a;
+}
+.red_line{
+    color: #e74e0f;
+}
+.kcp_item_avail
+{
+    font-size: 12px;
+    text-align: right;
+    border-bottom: 1px solid #b3b3b3;
+    padding: 2px 0 3px 0;
+    margin: 0 0 8px 0;
+}
+.kcp_item_info_wr
+{
+    padding: 0 0 0 20px;
+}
+.kcp_tab_content .__tdinfo{
+    vertical-align: top;
+}
+.kcp_item_ttl
+{
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+.kcp_item_ttl a{
+    color: #474646;
+}
+.kcp_item_ttl a:hover{
+    text-decoration: underline;
+    color: #0097d7;
+}
+.kcp_badge
+{
+    background: #D85215;
+    padding: 10px 6px;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 10px;
+}
+.abs_ico.kcp_badge
+{
+    background: #A7A7A7;
+    font-size: 4px;
+    padding: 5px 4px;
+    right: auto;
+    top: 2px;
+}
 @media screen and (max-width: 1280px) {
     .kcc_main_image
     {
@@ -681,5 +914,28 @@ html {
         padding: 0 0 0 20px;
         vertical-align: top;
         border-left: none;
+    }
+    .profile_card_has {
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .__tableinfo {
+        width: 100%;
+        display: block;
+    }
+    .__tdinfo {
+        width: 100%;
+        display: block;
+        vertical-align: middle;
+    }
+    .has_line {
+        border-right: none;
+    }
+    .info-card_wrpa {
+        padding: 10px 0 10px 0px;
+    }
+    .kcp_item_info_wr {
+        padding: 20px 0 0 0;
     }
 }

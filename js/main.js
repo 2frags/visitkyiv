@@ -30,11 +30,11 @@ Share = {
 };
 
 var mainmenu = '#mainmenu';
-$(document).ready(function() {
-        $( '.news_block, ul#mainmenu li:has(ul)' ).doubleTapToGo();
-	$('.slider_wide').addClass('notactive');
-    $(".read_more1").click(function() {
-        $(".item_hide").css("display","inline-block");
+$(document).ready(function () {
+    $('.news_block, ul#mainmenu li:has(ul)').doubleTapToGo();
+    $('.slider_wide').addClass('notactive');
+    $(".read_more1").click(function () {
+        $(".item_hide").css("display", "inline-block");
         $(this).hide();
     });
 
