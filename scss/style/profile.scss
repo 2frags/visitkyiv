@@ -297,6 +297,7 @@ $side_panel_bg: #474646;
 {
   max-width: 280px;
   padding: 0 6px;
+  overflow: hidden;
   h1{
     font-size: 1rem;
     text-transform: uppercase;
@@ -319,6 +320,8 @@ $side_panel_bg: #474646;
     width: 100%;
     font-size: .6rem;
     color: #999999;
+    right: 0px;
+    bottom: -13px;
   }
   .form-control{
     background: #fff;
@@ -347,7 +350,7 @@ $side_panel_bg: #474646;
   &_title{
     font-size: .9rem;
     line-height: 1;
-    margin: 16px 0 16px 0;
+    margin: 12px 0 12px 0;
     @include mquery(max-width, $s) {
       margin: 8px 0;
     }

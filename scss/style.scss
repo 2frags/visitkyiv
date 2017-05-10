@@ -453,11 +453,12 @@ footer {
 }
 .footer {
     &_top {
-        border-bottom: 1px solid #fff;
+        overflow: hidden;
     }
     &_socials {
         .col {
             border-left: #fff 1px solid;
+            overflow: hidden;
             &:hover {
                 &:hover {
                     background: #fff;
@@ -474,6 +475,7 @@ footer {
             padding: 15px;
             text-align: center;
         }
+        border-bottom: 1px solid #fff;
     }
 }
 //================================= queries 
